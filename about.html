@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HT Creative Studio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,400;0,800;1,200;1,400;1,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/simpleTransition.css">
+	<style type="text/css">
+		body {
+			background-color: black;
+			opacity: 0;
+			transition: 1.1s ease-in;
+		}
+		.row.topmenu {
+			display: flex;
+			align-items: center;
+		}
+		a.links {
+			font: italic 800 1vw Muli, san-serif;
+			color: black;
+		}
+		a.links:hover {
+			color: #996633;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.content {
+    		position: relative;
+  		}			
+		.wordCarousel {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			height: 100%;
+			display: flex;
+			align-items: center;
+/*			border: 1px solid;*/
+		}
+		a.active {
+			color: gold;
+		}
+		.row {
+			margin-top: 16px;
+/*			border: 1px solid;*/
+			text-align: center;
+		}
+		.body .row {
+			text-align: center;
+		}
+		#avatar {
+			border-radius: 50%;
+			margin-top: 2%;
+		}
+		#biography {
+			margin-top: 15px;
+		}
+		.linkicons {
+			margin-top: 15px;
+			letter-spacing: 10px;
+		}
+/*		.col-sm-2, .col-sm-8 {
+			border: 1px solid;
+		}*/
+		.logo {
+			max-width: 80%;
+			padding-top: 0;
+		}
+		.sidenav, .row.sidemenu {
+			display: none;
+		}
+
+		@media only screen and (max-width: 768px) {
+			.row.topmenu {
+				display: none;
+			}
+			.row.sidemenu {
+				display: flex;
+				align-items: center;
+			}
+			.row.sidemenu .logo {
+				max-width: 15%;
+				margin: auto;
+			}
+			.sidenav {
+				width: 0;
+				position: fixed;
+				background-color: #eee;
+				height: 100%;
+				z-index: 1;
+				overflow-x: hidden;
+				top: 0;
+				transition: width 0.5s;
+				display: block;
+			}
+			.sidenav .links{
+				display: block;
+				margin-top: 50px;
+				padding-left: 20px;
+				width: 100%;
+				font-size: 18px
+			}
+			.overlaymenu {
+				width: 60%;
+			}
+			.openbt {
+				float: left;
+				margin-left: 30px;
+				border: none;
+				outline: none;
+				background-color: transparent;
+				color: white;
+				font-size: 24px;
+			}
+			.closebt {
+				float: right;
+				margin-right: 30px;
+				transform: translateY(20px);
+				opacity: 0;
+				transition: 0.5s;
+				border: none;
+				outline: none;
+				background-color: transparent;
+			}
+			.activateclosebt {
+				transform: translateY(0);
+				opacity: 1;
+			}
+			#avatar {
+				transform: scale(0.75, 0.75);
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="sidenav">
+	<div><a class="links" href="index.html">HOME</a></div>
+	<div><a class="links" href="#">ABOUT</a></div>
+	<div><a class="links" href="portfolio.html">PORFOLIO</a></div>
+	<div><a class="links" href="blog.html">BLOG</a></div>
+	<div><a class="links" href="contact.html">CONTACT</a></div>
+</div>
+<div class="container-fluid header">
+	<div class="row topmenu">
+		<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
+		<div class="col-sm-1 pt-0" ><a class="links" href="index.html">HOME</a></div>
+		<div class="col-sm-1 pt-0"><a class="links active" href="#">ABOUT</a></div>
+		<div class="col-sm-1 pt-0"><a class="links" href="portfolio.html">PORFOLIO</a></div>
+		<div class="col-sm-1 pt-0"><a class="links" href="blog.html">BLOG</a></div>
+		<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
+	</div>
+	<div class="row sidemenu">
+			<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
+			<img class="logo" src="./images/logo-white.png">
+			<button onclick="closesidemenu()" class="closebt">
+					<i class="fa fa-window-close" aria-hidden="true"></i>
+			</button>
+	</div>
+</div>
+<div class="container-fluid body">
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<div class="content" id="content">
+					<div><img src="./images/avatar.jpg" id="avatar"></div>
+					<div class="linkicons">
+						<span>
+					      	<a href="https://www.linkedin.com/in/huy-tran-1b309644/"><i class="fa fa-linkedin-square fa-2x"></i></a>
+					      	<a href="mailto:htexhibitdesign@gmail.com"><i class="fa fa-envelope-square fa-2x"></i></a>
+					      	<a href="tel:617-898-8070"><i class="fa fa-phone-square fa-2x"></i></a>
+					    </span>
+					</div>
+					<div id="biography">
+						<h2>Huy M. Tran</h2>
+						<h4>M.Arch | Experienced Designer | Front-end Developer</h4><hr>
+						<p style="text-align: left;"><b>Hello,</b> my name is Huy M. Tran. I am an experienced exhibit designer, with an M.Arch degree in Architecture, and 10+ years of professional experience in the exhibit and trade show industry. My specialty is in custom modular exhibits. I am practical and knowledgeable in all phases of design, from concept, to design development and construction documentation. My go to programs are 3D Studio Max, Sketchup, Vectorworks Designer and Adobe Creative Suite.
+						<br><br>
+						<b>Currently,</b> besides working on cool exhibitions, I have been teaching myself HTML, CSS and Javascript. My goal is to add web design, interactive experience and front-end developing into my already awesome career.
+						<br><br>
+						<b>Specialties:</b> Sketching, Conceptual Design, Structural Design, Graphic Design, 3D Modeling, 3D Rendering, CAD Drafting and Detailing, Creative Thinking, 3D Studio Max, Sketchup, Vectorworks Designer, Adobe Creative Suite, SEO, HTML, CSS, Javascript, and Wordpress.</p>
+					</div>
+			</div>
+		</div>
+		<div class="col-sm-2"></div>
+	</div>
+</div>
+<div class="container-fluid footer">
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<p style="color: white;">Copyright &copy; 2020 HT Creative Studio</p>     
+		</div>
+		<div class="col-sm-2"></div>
+	</div>
+</div>
+<script type="text/javascript">
+	window.onload = function() {
+		 var player = document.getElementsByClassName("body")[0];
+		 console.log(player);
+		 player.className += " animate_content";
+		 document.body.style.backgroundColor = "#D7CCC8";
+		 document.body.style.opacity = 1;
+	}
+	function opensidemenu() {
+		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+	}
+	function closesidemenu() {
+		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+		document.body.style.backgroundColor = "#D7CCC8";
+	}
+</script>
+</body>
+</html>
