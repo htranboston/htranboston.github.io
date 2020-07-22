@@ -339,17 +339,17 @@ body {
 .el:nth-child(1) .el__bg.slide1:before {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
-  background-image: url("../portfolio/project1/01.png");
+  background-image: url("../portfolio/project1/01.jpg");
 }
 .el:nth-child(1) .el__bg.slide2:before {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
-  background-image: url("../portfolio/project1/02.png");
+  background-image: url("../portfolio/project1/02.jpg");
 }
 .el:nth-child(1) .el__bg.slide3:before {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
-  background-image: url("../portfolio/project1/03.png");
+  background-image: url("../portfolio/project1/03.jpg");
 }
 .el:nth-child(2) {
   -webkit-transform: translate3d(105.2083333333%, 0, 0);
@@ -415,17 +415,17 @@ body {
 .el:nth-child(3) .el__bg.slide1:before {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
-  background-image: url("../portfolio/project3/01.png");
+  background-image: url("../portfolio/project3/01.jpg");
 }
 .el:nth-child(3) .el__bg.slide2:before {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
-  background-image: url("../portfolio/project3/02.png");
+  background-image: url("../portfolio/project3/02.jpg");
 }
 .el:nth-child(3) .el__bg.slide3:before {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
-  background-image: url("../portfolio/project3/03.png");
+  background-image: url("../portfolio/project3/03.jpg");
 }
 .el:nth-child(4) {
   -webkit-transform: translate3d(315.625%, 0, 0);
@@ -453,17 +453,17 @@ body {
 .el:nth-child(4) .el__bg.slide1:before {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
-  background-image: url("../portfolio/project4/01.png");
+  background-image: url("../portfolio/project4/01.jpg");
 }
 .el:nth-child(4) .el__bg.slide2:before {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
-  background-image: url("../portfolio/project4/02.png");
+  background-image: url("../portfolio/project4/02.jpg");
 }
 .el:nth-child(4) .el__bg.slide3:before {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
-  background-image: url("../portfolio/project4/03.png");
+  background-image: url("../portfolio/project4/03.jpg");
 }
 .el:hover .el__bg:after {
   opacity: 0;

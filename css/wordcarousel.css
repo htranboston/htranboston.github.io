@@ -1,5 +1,5 @@
 .wordCarousel {
-    font: normal 800 2.5vw Muli, san-serif;
+    font: normal 800 3.5vw Muli, san-serif;
     width: 100%;
     color: white;
     height: 100px;
@@ -9,7 +9,7 @@
 .wordCarousel span {
     float: left;
     text-align: right;
-    width: 55%;
+    width: 75%;
 }
 
 .wordCarousel ul {
