@@ -81,9 +81,13 @@
 		}
 		.page-nav {
 			margin: 10px;
-			border: 1px solid;
 			text-align: center;
 			letter-spacing: 5px;
+			font-size: 2vw;
+		}
+		.page-nav a {
+			text-decoration: none;
+			color: white; 
 		}
 		/* Next & previous buttons */
 		.viewer-control .prev, .viewer-control .next {
@@ -234,12 +238,12 @@
 				    <div class="el">
 				      <div class="el__overflow">
 				        <div class="el__inner">
-				          <div class="el__bg"></div>
+				          <div class="el__bg slide1"></div>
 				          <div class="el__preview-cont">
-				            <h2 class="el__heading">Section 1</h2>
+				            <h2 class="el__heading">Path AI</h2>
 				          </div>
 				          <div class="el__content">
-				            <div class="el__text">Whatever</div>
+				            <div class="el__text">20x20 Island</div>
 				            <div class="el__close-btn"></div>
 				            <div class="viewer-control">
 							  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -260,13 +264,17 @@
 				    <div class="el">
 				      <div class="el__overflow">
 				        <div class="el__inner">
-				          <div class="el__bg"></div>
+				          <div class="el__bg slide1"></div>
 				          <div class="el__preview-cont">
-				            <h2 class="el__heading">Section 2</h2>
+				            <h2 class="el__heading">CCR</h2>
 				          </div>
 				          <div class="el__content">
-				            <div class="el__text">Whatever</div>
+				            <div class="el__text">CCR 20x30</div>
 				            <div class="el__close-btn"></div>
+				            <div class="viewer-control">
+							  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+				            </div>
 				          </div>
 				        </div>
 				      </div>
@@ -282,13 +290,17 @@
 				    <div class="el">
 				      <div class="el__overflow">
 				        <div class="el__inner">
-				          <div class="el__bg"></div>
+				          <div class="el__bg slide1"></div>
 				          <div class="el__preview-cont">
-				            <h2 class="el__heading">Section 3</h2>
+				            <h2 class="el__heading">Boost</h2>
 				          </div>
 				          <div class="el__content">
-				            <div class="el__text">Whatever</div>
+				            <div class="el__text">Boost 20x20</div>
 				            <div class="el__close-btn"></div>
+				            <div class="viewer-control">
+							  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+				            </div>
 				          </div>
 				        </div>
 				      </div>
@@ -304,13 +316,17 @@
 				    <div class="el">
 				      <div class="el__overflow">
 				        <div class="el__inner">
-				          <div class="el__bg"></div>
+				          <div class="el__bg slide1"></div>
 				          <div class="el__preview-cont">
-				            <h2 class="el__heading">Section 4</h2>
+				            <h2 class="el__heading">Wellframe</h2>
 				          </div>
 				          <div class="el__content">
-				            <div class="el__text">Whatever</div>
+				            <div class="el__text">Wellframe 20x20</div>
 				            <div class="el__close-btn"></div>
+				            <div class="viewer-control">
+							  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+				            </div>
 				          </div>
 				        </div>
 				      </div>
@@ -326,10 +342,10 @@
 				  <!-- cont inner end -->
 				</div>
 
-				<a href="https://dribbble.com/shots/2802024-Satellite-Website-Prototype" target="_blank" class="icon-link">
-				  <img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/256/Dribbble-icon.png">
+				<a href="https://intercontinentalsource.com" target="_blank" class="icon-link">
+				  <img src="./images/globalsourcing.png">
 				</a>
-				<a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
+				<a href="https://twitter.com/htcreativ" target="_blank" class="icon-link icon-link--twitter">
 				  <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
 				</a>
 			</div>
@@ -390,9 +406,8 @@
 	})
 
 	// Play portfolio slides
-	var project1 = ["./Portfolio/project1/01.png","./Portfolio/project1/02.png","./Portfolio/project1/03.png"]
 	var slideIndex = 1;
-	showSlides(slideIndex);
+	// showSlides(slideIndex);
 
 	// Next/previous controls
 	function plusSlides(n) {
@@ -405,15 +420,12 @@
 	  let _el__overflow = activeSlide[0].firstElementChild;
 	  let _el__inner = _el__overflow.children;
 	  let _el__bg = _el__inner[0].firstElementChild;
-	  // _el__bg.removeChild(_el__bg.childNodes[0]);
-	  // _el__bg.style.backgroundImage = "url('./Portfolio/project1/01.png')";
-	  console.log(_el__inner);
-	  // if (n > slides.length) {slideIndex = 1}
-	  // if (n < 1) {slideIndex = slides.length}
-	  // for (i = 0; i < slides.length; i++) {
-	  //     slides[i].style.display = "none";
-	  // }
-	  // slides[slideIndex-1].style.display = "block";
+	  if (n > 3) {slideIndex = 1}
+	  if (n < 1) {slideIndex = 3}
+	  for (i = 1; i < 4; i++) {
+	    _el__bg.classList.remove("slide"+i);
+	  }
+	  _el__bg.classList.add("slide"+slideIndex);
 	}
 </script>
 </body>
