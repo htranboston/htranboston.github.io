@@ -253,11 +253,11 @@ body {
   -webkit-transform: translate3d(0, 1vw, 0);
           transform: translate3d(0, 1vw, 0);
 }
-.el:hover .el__index {
+.el:hover .el__index, .el:active {
   -webkit-transform: translate3d(0, -80px, 0);
           transform: translate3d(0, -80px, 0);
 }
-.el:hover .el__bg {
+.el:hover .el__bg, .el:active {
   opacity: 1;
 }
 .cont.s--el-active .el__index {
