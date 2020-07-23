@@ -21,6 +21,11 @@
 		input[type=checkbox] {
 			margin-right: 10px;
 		}
+		@media only screen and (max-width: 500px) {
+			#add {
+				display: none;
+			}
+		}
 	</style>
 	<script type="text/javascript">
 		class ToDoItem {
@@ -67,7 +72,6 @@
 
 			//Add div to section id content
 			document.getElementById("content").appendChild(itemBox);
-			// document.getElementById("content").appendChild(document.createElement("BR"));
 
 			//Update Array
 			toDoList.push(myItem);
@@ -115,7 +119,7 @@
 	<p id="today">Today</p>
 </section>
 <section class="container bg-dark text-white pt-3 pb-3">
-	To do: <input type="text" name="todo" id="todo" onkeydown="hitEnterToCreate(event)"><button type="button" onclick="createItem()">Add</button>
+	To do: <input type="text" name="todo" id="todo" onkeydown="hitEnterToCreate(event)"><button type="button" onclick="createItem()" id="add">Add</button>
 </section>
 <section class="container bg-light pt-3" id="content">
 </section>
