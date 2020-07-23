@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+		* {
+			text-align: center;
+			font: 24px Roboto, sans-serif;
+		}
+		.alert {
+			text-align: left;
+			display: block;
+		}
+		input[type=checkbox] {
+			margin-right: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		class ToDoItem {
+			constructor(item, checkbox, detail, button) {
+				this.item = item; //Unique ID
+				this.check = checkbox; //Input checkbox object
+				this.detail = detail; //Label text
+				this.button = button; //Delete button
+			}
+			normalStage() {
+				this.detail.style.textDecoration = "";
+			}	
+			finishStage() {
+				this.detail.style.textDecoration = "line-through";
+			}
+		}
+		var i = 1;
+		var toDoList = new Array();
+		function createItem() {
+			i = checkLastItem();
+			let checkbox = document.createElement("INPUT");
+			let detail = document.createElement("LABEL");
+			detail.setAttribute("contenteditable", "true");
+			let bt = document.createElement("BUTTON");
+			bt.type = "button";
+			bt.setAttribute("data-dismiss","alert");
+			bt.className = "close"
+			bt.innerHTML = "&times;";
+			let labelTxt = document.createTextNode(i + ". " + document.getElementById("todo").value);
+			checkbox.type = "checkbox";
+			checkbox.class = "checkbox";
+			detail.appendChild(labelTxt);
+			var myItem = new ToDoItem(i, checkbox, detail, bt);
+
+			//Create a container for each to do item
+			let itemBox = document.createElement("DIV");
+			itemBox.className = "alert alert-secondary alert-dismissible";
+
+			//Add elements to div
+			itemBox.appendChild(myItem.check);
+			itemBox.appendChild(myItem.detail);
+			itemBox.appendChild(myItem.button);
+
+
+			//Add div to section id content
+			document.getElementById("content").appendChild(itemBox);
+			// document.getElementById("content").appendChild(document.createElement("BR"));
+
+			//Update Array
+			toDoList.push(myItem);
+
+			//Update counter
+			i++;
+		}
+		function hitEnterToCreate(event) {
+			let e = event.key;
+			if(e == "Enter") {
+				createItem();
+			}
+		}
+		document.onchange = function() {
+			toDoList.forEach(checkTask);
+			function checkTask(item,index) {
+				if(item.check.checked == false) {
+					item.normalStage();
+				} else {
+					item.finishStage();
+				}
+			}
+		}
+		window.onload = () => {
+			var myTimer = setInterval(getToday,1000);
+			function getToday() {
+				var d = new Date();
+				document.getElementById("today").innerHTML = d;
+			}
+		}
+		function checkLastItem() {
+			let items = document.getElementsByTagName("DIV");
+			if(items.length == 0) {
+				return 1;
+			}
+			if(items.length > 0) {
+				return(items.length + 1);
+			}
+		}
+	</script>
+</head>
+<body>
+<section class="container bg-primary text-white pt-3 pb-1">
+	<h2>MY TO DO LIST</h2>
+	<p id="today">Today</p>
+</section>
+<section class="container bg-dark text-white pt-3 pb-3">
+	To do: <input type="text" name="todo" id="todo" onkeydown="hitEnterToCreate(event)"><button type="button" onclick="createItem()">Add</button>
+</section>
+<section class="container bg-light pt-3" id="content">
+</section>
+</body>
+</html>

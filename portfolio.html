@@ -81,11 +81,13 @@
 		}
 		.page-nav {
 			margin-top: 20px;
-			letter-spacing: 5px;
 			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 		.page-nav a {
-			color: white;
+			color: black;
 		}
 		.page-nav a.active {
 			color: gold;
@@ -228,8 +230,11 @@
 </div>
 <div class="container-fluid body">
 	<div class="page-nav">
-		<a href="#" class="active"><i class="fa fa-circle"></i></a>
-		<a href="#"><i class="fa fa-circle"></i></a>
+		<ul class="pagination">
+		  <li class="page-item"><a class="page-link active" href="#">1</a></li>
+		  <li class="page-item"><a class="page-link" href="#">2</a></li>
+		  <li class="page-item"><a class="page-link" href="#">3</a></li>
+		</ul>
 	</div>
 	<div class="row">
 		<div class="col-sm-0"></div>
