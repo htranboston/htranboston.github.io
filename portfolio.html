@@ -373,6 +373,12 @@
 		 document.body.style.backgroundColor = "gray";
 		 document.body.style.opacity = 1;
 	}
+	var el = document.getElementsByClassName("el");
+	for(let i=0; i<el.length; i++) {
+		el[i].addEventListener("touchmove", function() {
+			el[i].classList.toggle("activate_touch");
+		})
+	}
 	function opensidemenu() {
 		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
 		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
