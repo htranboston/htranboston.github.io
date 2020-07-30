@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Day Trader Calculator</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+window.onload = function() {
+	let bts = document.getElementsByTagName('BUTTON');
+	for(let i=0; i<bts.length; i++) {
+		bts[i].classList.add("btn","btn-primary");
+	}
+}
+$(document).ready(function(){
+    $('#Cal1').click(function(){
+        H = parseFloat($('#high1').val());
+        L = parseFloat($('#low1').val());
+        C = H;
+        $('#pp').val(Calpp(H,L,C));
+        $('#r3').val(Calr3(H,L,C));
+        $('#r1').val(Calr1(H,L,C));
+        $('#s1').val(Cals1(H,L,C));
+        $('#r2').val(Calr2(H,L,C));
+        $('#s2').val(Cals2(H,L,C));
+        $('#s3').val(Cals3(H,L,C));
+        $('#buy1').val(Cal50(H,L,C));
+        $('#sell1').val($('#r1').val());
+        $('#stop1').val($('#s1').val());
+        $('#share').text(Math.round(CalShares(H,L,C)));
+        $('#profit').text("$"+Math.round(CalProfit(H,L,C)));
+        $('#loss').text("$"+Math.round(CalLoss(H,L,C)));
+    });
+
+    $('#Cal2').click(function(){
+        H = parseFloat($('#high2').val());
+        L = parseFloat($('#low2').val());
+        T = H+(H - L);
+        var shares = Math.round(2000/H);
+        var profit = Math.round(shares*(H-L));
+        var loss = Math.round(0.33*profit);
+        var stop = (H-(loss/shares));
+        $('#share').text(shares);
+        $('#profit').text("$"+profit);
+        $('#loss').text("$"+loss);
+        $('#buy2').val(H);
+        $('#sell2').val(T);
+        $('#stop2').val(stop);
+    })
+
+    $('.reset').click(function(){
+        $('input').val(0);
+        $('#share').text("0");
+        $('#profit').text("$0");
+        $('#loss').text("$0");
+    });
+
+    $('#Cal3').click(function(){
+        E = parseFloat($('#eps').val());
+        G = parseFloat($('#g').val());
+        Y = parseFloat ($('#y').val());
+        $('#iv').text(CalIV(E,G,Y));
+    })
+})
+
+function Calpp(H,L,C){
+    return((H+L+C)/3);
+}
+
+function Calr3(H,L,C){
+    var Pivot = Calpp(H,L,C)
+    var r3 = H + 2 * ( Pivot - L );
+    return(r3);
+}
+
+function Calr1(H,L,C){
+    var Pivot = Calpp(H,L,C)
+    var r1 = 2 * Pivot - L
+    return(r1);
+}
+
+function Cals1(H,L,C){
+    var Pivot = Calpp(H,L,C)
+    var s1 = 2 * Pivot - H
+    return(s1);
+}
+
+function Calr2(H,L,C){
+    var Pivot = Calpp(H,L,C)
+    var R1 = Calr1(H,L,C);
+    var S1 = Cals1(H,L,C);
+    var r2 = Pivot + ( R1 - S1 )
+    return(r2);
+}
+
+function Cals2(H,L,C){
+    var Pivot = Calpp(H,L,C)
+    var R1 = Calr1(H,L,C);
+    var S1 = Cals1(H,L,C);
+    var s2 = Pivot - ( R1 - S1 )
+    return(s2);
+}
+
+function Cals3(H,L,C){
+    var Pivot = Calpp(H,L,C)
+    var s3 = L - 2 * ( H - Pivot );
+    return(s3);
+}
+
+function Cal50(H,L,C){
+    return((H+L)/2);
+}
+
+function CalShares(H,L,C){
+    var result = 2000/Cal50(H,L,C);
+    return(result);
+}
+
+function CalProfit(H,L,C){
+    var result = CalShares(H,L,C) * (Calr1(H,L,C) - Cal50(H,L,C));
+    return(result);
+}
+function CalLoss(H,L,C){
+    var result = CalShares(H,L,C) * (Cal50(H,L,C) - Cals1(H,L,C));
+    return(result);
+}
+function CalIV(E,G,Y){
+    var iv = E*(8.5+2*G)*4.4/Y;
+    var result = iv.toFixed(2);
+    return(result);
+}
+
+</script>
+<style>
+    .master
+    {
+        color: black;
+        width: 700px;
+        border: 1px solid;
+        text-align: center;
+        font: 12px arial bold, san-serif;
+    }
+    .results
+    {
+        width: 100%;
+        text-align: left;
+    }
+    #sell
+    {
+        color: green;
+    }
+    #buy
+    {
+    }
+    #stop
+    {
+        color: red;
+    }
+    table
+    {
+        font-style: bold;
+        height: 80px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #et_GetCash {
+    	margin-bottom: 20px;
+    	margin-left: auto;
+    	margin-right: auto;
+    	width: 100px;
+    }
+    #strategy1 {
+        width: 100%;
+        height: 250px;
+        border: 1px solid;
+        padding: 10px;
+        background-image: url("lib/strategy1.jpg");
+        background-repeat: no-repeat;
+        text-align: left;
+    }
+    #result1 {
+        width: 100%;
+        border: 1px solid;
+        padding: 10px;
+        margin-top: 60px;
+    }
+     #result2 {
+        width: 100%;
+        border: 1px solid;
+        padding: 10px;
+        margin-top: 60px;
+		text-align: left;
+    }
+    #strategy2 {
+        width: 100%;
+        height: 250px;
+        border: 1px solid;
+        padding: 10px;
+        background-image: url("lib/strategy2.jpg");
+        background-repeat: no-repeat;
+        text-align: left;
+    }
+    input {
+        width: 150px;
+        font-size: 18px;
+    }
+    button {
+    	margin: 2px;
+    	width: 80px;
+    }
+    .cal-footer {
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	margin-top: 20px;
+    }
+    .cal-footer p {
+    	padding-top: 25px;
+    	font-size: 18px;
+    	color: white;
+    }
+</style>
+</head>
+
+<body>
+<!-- Table to show account information and projected gain vs loss -->
+<div class="master container">
+	<section class="row cal-header">
+		<table class="table-dark table-bordered">
+		    <tr>
+		        <th>INVESTMENT</th>
+		        <th>SHARE</th>
+		        <th>PROFIT</th>
+		        <th>LOSS</th>
+		    </tr>
+		    <tr>
+		        <td>$2000</td>
+		        <td id="share"></td>
+		        <td id="profit"></td>
+		        <td id="loss"></td>
+		    </tr>
+		</table>
+		<button class="myEtrade" id="et_GetCash">Get Cash</button>
+	</section>
+	<div class="row">
+		<div class="col-sm-6 types" style="height: 200px;">
+			<!-- Strategy 1 - Buy at pull back with strong volume -->
+			<div id="strategy1">
+				SYMBOL: <input id="symbol1" type="text" value="AAPL"><button class="myEtrade" id="et_Symbol1">GET</button><br>
+				HIGH: <input id="high1" style="margin-left: 20px;"><br>
+				LOW: <input id="low1" style="margin-left: 23px;"><br>
+			</div>
+		</div>
+		<div class="col-sm-6 types" style="height: 200px;">
+			<!-- Strategy 2 - Buy at cross over with strong volume -->
+			<div id="strategy2">
+				SYMBOL: <input id="symbol2" type="text" value="GOOG"><button class="myEtrade" id="et_Symbol2">GET</button><br>
+				HIGH: <input id="high2" style="margin-left: 20px;"><br>
+				LOW: <input id="low2" style="margin-left: 23px;"><br>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 results">
+			<!-- Result 1 -->
+			<div id="result1">
+				<button id="Cal1">Calculate</button>
+				<button class="reset">Reset</button>
+				<button id="cancel">Cancel</button><br><br>
+				<button class="myEtrade" id="et_Buy1">BUY</button><input id="buy1"><br>
+				<button class="myEtrade" id="et_Sell1">SELL</button><input id="sell1"><br>
+				<button class="myEtrade" id="et_Stop1">STOP</button><input id="stop1"><br>
+				<button class="myEtrade" id="et_R3">R3</button><input id="r3"><br>
+				<button class="myEtrade" id="et_R2">R2</button><input id="r2"><br>
+				<button class="myEtrade" id="et_R1">R2</button><input id="r1"><br>
+				<button class="myEtrade" id="et_Pp">PP</button><input id="pp"><br>
+				<button class="myEtrade" id="et_S1">S1</button><input id="s1"><br>
+				<button class="myEtrade" id="et_S2">S2</button><input id="s2"><br>
+				<button class="myEtrade" id="et_S3">S3</button><input id="s3"><br>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<!-- Result 2 -->
+			<div id="result2">
+				<button id="Cal2">Calculate</button>
+				<button class="reset">Reset</button>
+				<button id="cancel">Cancel</button><br><br>
+				<button class="myEtrade" id="et_Buy2">BUY</button><input id="buy2"><br>
+				<button class="myEtrade" id="et_Sell2">SELL</button><input id="sell2"><br>
+				<button class="myEtrade" id="et_Stop2">STOP</button><input id="stop2"><br>
+			</div>
+		</div>
+	</div>
+	<div class="row cal-footer bg-secondary">
+		<p>Copyright &copy; 2015 HP Investment.</p>
+	</div>
+</div>
+</body>
+</html>
