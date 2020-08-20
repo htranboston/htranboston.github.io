@@ -5,16 +5,233 @@ TDV.PlayerAPI.defineScript({ "definitions": [
   "label": "INTSource-01S",
   "frames": [
    {
+    "overlays": [
+     {
+      "areas": [
+       {
+        "toolTip": "About Us",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"https://intercontinentalsource.com/\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_01208234_0980_1806_419A_59BC2821C447",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_0_HS_3_1_0_map.gif",
+           "height": 70,
+           "class": "ImageResourceLevel",
+           "width": 50
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 6.82,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": -0.83,
+        "hfov": 3.05
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_0_HS_3_0.png",
+           "height": 141,
+           "class": "ImageResourceLevel",
+           "width": 101
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 6.82,
+        "yaw": -0.83,
+        "class": "HotspotPanoramaOverlayImage",
+        "roll": 0,
+        "hfov": 3.05
+       }
+      ]
+     },
+     {
+      "areas": [
+       {
+        "toolTip": "Contact Us",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"mailto:order@intercontinentalsource.com\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_0624A357_0980_1802_41A2_6698C18C4F04",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_0_HS_2_0_0_map.gif",
+           "height": 43,
+           "class": "ImageResourceLevel",
+           "width": 36
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": -7.78,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": -12.58,
+        "hfov": 2.2
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_0_HS_2_0.png",
+           "height": 87,
+           "class": "ImageResourceLevel",
+           "width": 73
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": -7.78,
+        "yaw": -12.58,
+        "class": "HotspotPanoramaOverlayImage",
+        "hfov": 2.2
+       }
+      ]
+     },
+     {
+      "areas": [
+       {
+        "toolTip": "About Us",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"https://intercontinentalsource.com/\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_015DEA8C_0980_0806_41AA_5FDDC25FE2CE",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_0_HS_1_1_0_map.gif",
+           "height": 57,
+           "class": "ImageResourceLevel",
+           "width": 45
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 12.2,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": 18.14,
+        "hfov": 2.7
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_0_HS_1_0.png",
+           "height": 114,
+           "class": "ImageResourceLevel",
+           "width": 90
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 12.2,
+        "yaw": 18.14,
+        "class": "HotspotPanoramaOverlayImage",
+        "roll": 0,
+        "hfov": 2.7
+       }
+      ]
+     },
+     {
+      "areas": [
+       {
+        "toolTip": "Recent Projects",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"https://intercontinentalsource.com/projects/\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_0114AC97_0980_0802_41A6_3E895FD31E78",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_0_HS_0_1_0_map.gif",
+           "height": 172,
+           "class": "ImageResourceLevel",
+           "width": 41
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 5.02,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": 18.22,
+        "hfov": 2.5
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_0_HS_0_0.png",
+           "height": 344,
+           "class": "ImageResourceLevel",
+           "width": 83
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 5.02,
+        "yaw": 18.22,
+        "class": "HotspotPanoramaOverlayImage",
+        "roll": 0,
+        "hfov": 2.5
+       }
+      ]
+     }
+    ],
     "right": {
      "levels": [
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_r_hq.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_r_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_r.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_r.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -25,13 +242,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "front": {
      "levels": [
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_f_hq.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_f_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_f.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_f.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -43,13 +260,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "back": {
      "levels": [
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_b_hq.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_b_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_b.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_b.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -60,13 +277,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "top": {
      "levels": [
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_u_hq.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_u_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_u.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_u.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -77,13 +294,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "bottom": {
      "levels": [
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_d_hq.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_d_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_d.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_d.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -94,13 +311,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "left": {
      "levels": [
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_l_hq.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_l_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_l.jpeg",
+       "url": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_l.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -108,12 +325,12 @@ TDV.PlayerAPI.defineScript({ "definitions": [
      ],
      "class": "ImageResource"
     },
-    "thumbnailUrl": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_t.jpg"
+    "thumbnailUrl": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_t.jpg"
    }
   ],
   "hfovMin": 60,
-  "thumbnailUrl": "media/panorama_020C9C7B_0880_031B_4172_8048D0022D2E_t.jpg",
-  "id": "panorama_020C9C7B_0880_031B_4172_8048D0022D2E",
+  "thumbnailUrl": "media/panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_t.jpg",
+  "id": "panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08",
   "class": "Panorama",
   "partial": false,
   "pitch": 0,
@@ -130,7 +347,7 @@ TDV.PlayerAPI.defineScript({ "definitions": [
   "mouseControlMode": "drag_rotation"
  },
  {
-  "id": "panorama_020C9C7B_0880_031B_4172_8048D0022D2E_camera",
+  "id": "panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_camera",
   "class": "PanoramaCamera",
   "initialPosition": {
    "pitch": 0,
@@ -145,16 +362,234 @@ TDV.PlayerAPI.defineScript({ "definitions": [
   "label": "INTSource-02S",
   "frames": [
    {
+    "overlays": [
+     {
+      "areas": [
+       {
+        "toolTip": "Follow Us on Instagram",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"https://www.instagram.com/intercontinentalsource/\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_01565D88_0980_080D_41A9_7FFE37A3C73A",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_0_HS_3_1_0_map.gif",
+           "height": 47,
+           "class": "ImageResourceLevel",
+           "width": 25
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 3.9,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": 16.55,
+        "hfov": 1.53
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_0_HS_3_0.png",
+           "height": 95,
+           "class": "ImageResourceLevel",
+           "width": 50
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 3.9,
+        "yaw": 16.55,
+        "class": "HotspotPanoramaOverlayImage",
+        "roll": 0,
+        "hfov": 1.53
+       }
+      ]
+     },
+     {
+      "areas": [
+       {
+        "toolTip": "Connect with Us via Linkedin",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"https://www.linkedin.com/in/huy-tran-1b309644/\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_06BFBE91_0980_081E_4186_8B8181E8A0F0",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_0_HS_2_1_0_map.gif",
+           "height": 44,
+           "class": "ImageResourceLevel",
+           "width": 26
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 7.75,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": 16.69,
+        "hfov": 1.56
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_0_HS_2_0.png",
+           "height": 88,
+           "class": "ImageResourceLevel",
+           "width": 52
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 7.75,
+        "yaw": 16.69,
+        "class": "HotspotPanoramaOverlayImage",
+        "roll": 0,
+        "hfov": 1.56
+       }
+      ]
+     },
+     {
+      "areas": [
+       {
+        "toolTip": "Like Us on Facebook",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"https://www.facebook.com/intsource7\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_01AEC2AB_0980_1802_418E_6BD8478214CF",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_0_HS_1_1_0_map.gif",
+           "height": 42,
+           "class": "ImageResourceLevel",
+           "width": 22
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 11.18,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": 16.71,
+        "hfov": 1.36
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_0_HS_1_0.png",
+           "height": 85,
+           "class": "ImageResourceLevel",
+           "width": 45
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 11.18,
+        "yaw": 16.71,
+        "class": "HotspotPanoramaOverlayImage",
+        "roll": 0,
+        "hfov": 1.36
+       }
+      ]
+     },
+     {
+      "areas": [
+       {
+        "toolTip": "About Us",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"https://intercontinentalsource.com/\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_06FC7E12_0980_0802_4172_EE70108DDFC4",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_0_HS_0_1_0_map.gif",
+           "height": 70,
+           "class": "ImageResourceLevel",
+           "width": 57
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 8.78,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": 2.42,
+        "hfov": 3.45
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_0_HS_0_0.png",
+           "height": 140,
+           "class": "ImageResourceLevel",
+           "width": 115
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 8.78,
+        "yaw": 2.42,
+        "class": "HotspotPanoramaOverlayImage",
+        "roll": 0,
+        "hfov": 3.45
+       }
+      ]
+     }
+    ],
     "right": {
      "levels": [
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_r_hq.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_r_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_r.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_r.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -165,13 +600,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "front": {
      "levels": [
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_f_hq.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_f_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_f.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_f.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -183,13 +618,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "back": {
      "levels": [
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_b_hq.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_b_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_b.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_b.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -200,13 +635,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "top": {
      "levels": [
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_u_hq.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_u_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_u.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_u.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -217,13 +652,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "bottom": {
      "levels": [
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_d_hq.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_d_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_d.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_d.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -234,13 +669,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "left": {
      "levels": [
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_l_hq.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_l_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_l.jpeg",
+       "url": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_l.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -248,19 +683,19 @@ TDV.PlayerAPI.defineScript({ "definitions": [
      ],
      "class": "ImageResource"
     },
-    "thumbnailUrl": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_t.jpg"
+    "thumbnailUrl": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_t.jpg"
    }
   ],
   "hfovMin": 60,
-  "thumbnailUrl": "media/panorama_00FD925D_0880_071C_4190_75EA35B6AE87_t.jpg",
-  "id": "panorama_00FD925D_0880_071C_4190_75EA35B6AE87",
+  "thumbnailUrl": "media/panorama_077D7622_0980_7802_41A8_AE84B0948ED9_t.jpg",
+  "id": "panorama_077D7622_0980_7802_41A8_AE84B0948ED9",
   "class": "Panorama",
   "partial": false,
   "pitch": 0,
   "hfov": 360
  },
  {
-  "id": "panorama_00FD925D_0880_071C_4190_75EA35B6AE87_camera",
+  "id": "panorama_077D7622_0980_7802_41A8_AE84B0948ED9_camera",
   "class": "PanoramaCamera",
   "initialPosition": {
    "pitch": 0,
@@ -275,16 +710,126 @@ TDV.PlayerAPI.defineScript({ "definitions": [
   "label": "INTSource-03S",
   "frames": [
    {
+    "overlays": [
+     {
+      "areas": [
+       {
+        "toolTip": "About Us",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"https://intercontinentalsource.com/\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_06830895_0980_0806_41A8_9C389BD20FC0",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_0_HS_1_1_0_map.gif",
+           "height": 50,
+           "class": "ImageResourceLevel",
+           "width": 95
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 11.26,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": -6.58,
+        "hfov": 5.73
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_0_HS_1_0.png",
+           "height": 101,
+           "class": "ImageResourceLevel",
+           "width": 191
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 11.26,
+        "yaw": -6.58,
+        "class": "HotspotPanoramaOverlayImage",
+        "roll": 0,
+        "hfov": 5.73
+       }
+      ]
+     },
+     {
+      "areas": [
+       {
+        "toolTip": "Recent projects",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"https://intercontinentalsource.com/shop/\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_0106DE1B_0980_0803_41A7_1B4F51C2D156",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_0_HS_0_1_0_map.gif",
+           "height": 170,
+           "class": "ImageResourceLevel",
+           "width": 81
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 3.8,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": -6.66,
+        "hfov": 4.87
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_0_HS_0_0.png",
+           "height": 340,
+           "class": "ImageResourceLevel",
+           "width": 162
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 3.8,
+        "yaw": -6.66,
+        "class": "HotspotPanoramaOverlayImage",
+        "roll": 0,
+        "hfov": 4.87
+       }
+      ]
+     }
+    ],
     "right": {
      "levels": [
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_r_hq.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_r_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_r.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_r.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -295,13 +840,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "front": {
      "levels": [
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_f_hq.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_f_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_f.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_f.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -313,13 +858,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "back": {
      "levels": [
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_b_hq.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_b_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_b.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_b.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -330,13 +875,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "top": {
      "levels": [
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_u_hq.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_u_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_u.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_u.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -347,13 +892,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "bottom": {
      "levels": [
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_d_hq.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_d_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_d.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_d.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -364,13 +909,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "left": {
      "levels": [
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_l_hq.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_l_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_l.jpeg",
+       "url": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_l.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -378,19 +923,19 @@ TDV.PlayerAPI.defineScript({ "definitions": [
      ],
      "class": "ImageResource"
     },
-    "thumbnailUrl": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_t.jpg"
+    "thumbnailUrl": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_t.jpg"
    }
   ],
   "hfovMin": 60,
-  "thumbnailUrl": "media/panorama_0F60B37B_0880_0525_4181_F34451754E8B_t.jpg",
-  "id": "panorama_0F60B37B_0880_0525_4181_F34451754E8B",
+  "thumbnailUrl": "media/panorama_07644878_0980_080E_4182_B3EEC7567394_t.jpg",
+  "id": "panorama_07644878_0980_080E_4182_B3EEC7567394",
   "class": "Panorama",
   "partial": false,
   "pitch": 0,
   "hfov": 360
  },
  {
-  "id": "panorama_0F60B37B_0880_0525_4181_F34451754E8B_camera",
+  "id": "panorama_07644878_0980_080E_4182_B3EEC7567394_camera",
   "class": "PanoramaCamera",
   "initialPosition": {
    "pitch": 0,
@@ -405,16 +950,124 @@ TDV.PlayerAPI.defineScript({ "definitions": [
   "label": "INTSource-04S",
   "frames": [
    {
+    "overlays": [
+     {
+      "areas": [
+       {
+        "toolTip": "Recent Projects",
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000",
+        "click": "var newWindow = window.open(\"https://intercontinentalsource.com/projects/\", \"_blank\"); newWindow.focus()",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_06928681_0981_F8FE_4166_097BE6F629B6",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_0_HS_1_0_0_map.gif",
+           "height": 48,
+           "class": "ImageResourceLevel",
+           "width": 52
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 9.12,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": 1.35,
+        "hfov": 3.08
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_0_HS_1_0.png",
+           "height": 97,
+           "class": "ImageResourceLevel",
+           "width": 104
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": 9.12,
+        "yaw": 1.35,
+        "class": "HotspotPanoramaOverlayImage",
+        "hfov": 3.08
+       }
+      ]
+     },
+     {
+      "enabledInCardboard": true,
+      "areas": [
+       {
+        "toolTip": "Live Chat",
+        "mapColor": "#FF0000",
+        "class": "HotspotPanoramaOverlayArea",
+        "displayTooltipInTouchScreens": true
+       }
+      ],
+      "id": "overlay_069C4F1E_0980_0802_41A4_AA7A7EB76960",
+      "class": "HotspotPanoramaOverlay",
+      "rollOverDisplay": false,
+      "useHandCursor": true,
+      "maps": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_0_HS_0_0_0_map.gif",
+           "height": 47,
+           "class": "ImageResourceLevel",
+           "width": 52
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": -1.58,
+        "class": "HotspotPanoramaOverlayMap",
+        "yaw": -9,
+        "hfov": 3.12
+       }
+      ],
+      "items": [
+       {
+        "image": {
+         "levels": [
+          {
+           "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_0_HS_0_0.png",
+           "height": 95,
+           "class": "ImageResourceLevel",
+           "width": 104
+          }
+         ],
+         "class": "ImageResource"
+        },
+        "pitch": -1.58,
+        "yaw": -9,
+        "class": "HotspotPanoramaOverlayImage",
+        "hfov": 3.12
+       }
+      ]
+     }
+    ],
     "right": {
      "levels": [
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_r_hq.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_r_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_r.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_r.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -425,13 +1078,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "front": {
      "levels": [
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_f_hq.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_f_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_f.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_f.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -443,13 +1096,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "back": {
      "levels": [
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_b_hq.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_b_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_b.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_b.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -460,13 +1113,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "top": {
      "levels": [
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_u_hq.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_u_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_u.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_u.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -477,13 +1130,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "bottom": {
      "levels": [
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_d_hq.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_d_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_d.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_d.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -494,13 +1147,13 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "left": {
      "levels": [
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_l_hq.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_l_hq.jpeg",
        "height": 3816,
        "class": "ImageResourceLevel",
        "width": 3816
       },
       {
-       "url": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_l.jpeg",
+       "url": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_l.jpeg",
        "height": 1591,
        "class": "ImageResourceLevel",
        "width": 1591
@@ -508,19 +1161,19 @@ TDV.PlayerAPI.defineScript({ "definitions": [
      ],
      "class": "ImageResource"
     },
-    "thumbnailUrl": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_t.jpg"
+    "thumbnailUrl": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_t.jpg"
    }
   ],
   "hfovMin": 60,
-  "thumbnailUrl": "media/panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_t.jpg",
-  "id": "panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8",
+  "thumbnailUrl": "media/panorama_0777A661_0980_183F_41A8_8DB3229D509D_t.jpg",
+  "id": "panorama_0777A661_0980_183F_41A8_8DB3229D509D",
   "class": "Panorama",
   "partial": false,
   "pitch": 0,
   "hfov": 360
  },
  {
-  "id": "panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_camera",
+  "id": "panorama_0777A661_0980_183F_41A8_8DB3229D509D_camera",
   "class": "PanoramaCamera",
   "initialPosition": {
    "pitch": 0,
@@ -532,31 +1185,31 @@ TDV.PlayerAPI.defineScript({ "definitions": [
  {
   "items": [
    {
-    "media": "this.panorama_020C9C7B_0880_031B_4172_8048D0022D2E",
+    "media": "this.panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08",
     "player": "this.MainViewerPanoramaPlayer",
     "class": "PanoramaPlayListItem",
-    "camera": "this.panorama_020C9C7B_0880_031B_4172_8048D0022D2E_camera",
+    "camera": "this.panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_camera",
     "begin": "this.setEndToItemIndex(this.mainPlayList, 0, 1)"
    },
    {
-    "media": "this.panorama_00FD925D_0880_071C_4190_75EA35B6AE87",
+    "media": "this.panorama_077D7622_0980_7802_41A8_AE84B0948ED9",
     "player": "this.MainViewerPanoramaPlayer",
     "class": "PanoramaPlayListItem",
-    "camera": "this.panorama_00FD925D_0880_071C_4190_75EA35B6AE87_camera",
+    "camera": "this.panorama_077D7622_0980_7802_41A8_AE84B0948ED9_camera",
     "begin": "this.setEndToItemIndex(this.mainPlayList, 1, 2)"
    },
    {
-    "media": "this.panorama_0F60B37B_0880_0525_4181_F34451754E8B",
+    "media": "this.panorama_07644878_0980_080E_4182_B3EEC7567394",
     "player": "this.MainViewerPanoramaPlayer",
     "class": "PanoramaPlayListItem",
-    "camera": "this.panorama_0F60B37B_0880_0525_4181_F34451754E8B_camera",
+    "camera": "this.panorama_07644878_0980_080E_4182_B3EEC7567394_camera",
     "begin": "this.setEndToItemIndex(this.mainPlayList, 2, 3)"
    },
    {
-    "media": "this.panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8",
+    "media": "this.panorama_0777A661_0980_183F_41A8_8DB3229D509D",
     "player": "this.MainViewerPanoramaPlayer",
     "class": "PanoramaPlayListItem",
-    "camera": "this.panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_camera",
+    "camera": "this.panorama_0777A661_0980_183F_41A8_8DB3229D509D_camera",
     "begin": "this.setEndToItemIndex(this.mainPlayList, 3, 0)"
    }
   ],
@@ -566,31 +1219,31 @@ TDV.PlayerAPI.defineScript({ "definitions": [
  {
   "items": [
    {
-    "media": "this.panorama_020C9C7B_0880_031B_4172_8048D0022D2E",
+    "media": "this.panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08",
     "player": "this.MainViewerPanoramaPlayer",
     "class": "PanoramaPlayListItem",
-    "camera": "this.panorama_020C9C7B_0880_031B_4172_8048D0022D2E_camera",
+    "camera": "this.panorama_071EAB13_0980_0802_41A1_84CCAB4A6E08_camera",
     "begin": "this.setEndToItemIndex(this.playList_0C8220F3_0217_7925_4177_A3813F3BC9BA, 0, 1)"
    },
    {
-    "media": "this.panorama_00FD925D_0880_071C_4190_75EA35B6AE87",
+    "media": "this.panorama_077D7622_0980_7802_41A8_AE84B0948ED9",
     "player": "this.MainViewerPanoramaPlayer",
     "class": "PanoramaPlayListItem",
-    "camera": "this.panorama_00FD925D_0880_071C_4190_75EA35B6AE87_camera",
+    "camera": "this.panorama_077D7622_0980_7802_41A8_AE84B0948ED9_camera",
     "begin": "this.setEndToItemIndex(this.playList_0C8220F3_0217_7925_4177_A3813F3BC9BA, 1, 2)"
    },
    {
-    "media": "this.panorama_0F60B37B_0880_0525_4181_F34451754E8B",
+    "media": "this.panorama_07644878_0980_080E_4182_B3EEC7567394",
     "player": "this.MainViewerPanoramaPlayer",
     "class": "PanoramaPlayListItem",
-    "camera": "this.panorama_0F60B37B_0880_0525_4181_F34451754E8B_camera",
+    "camera": "this.panorama_07644878_0980_080E_4182_B3EEC7567394_camera",
     "begin": "this.setEndToItemIndex(this.playList_0C8220F3_0217_7925_4177_A3813F3BC9BA, 2, 3)"
    },
    {
-    "media": "this.panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8",
+    "media": "this.panorama_0777A661_0980_183F_41A8_8DB3229D509D",
     "player": "this.MainViewerPanoramaPlayer",
     "class": "PanoramaPlayListItem",
-    "camera": "this.panorama_0F631F0E_0880_3EFF_4148_37B21B8322C8_camera",
+    "camera": "this.panorama_0777A661_0980_183F_41A8_8DB3229D509D_camera",
     "begin": "this.setEndToItemIndex(this.playList_0C8220F3_0217_7925_4177_A3813F3BC9BA, 3, 0)"
    }
   ],
@@ -894,7 +1547,7 @@ TDV.PlayerAPI.defineScript({ "definitions": [
     "minWidth": 0,
     "backgroundOpacity": 0,
     "right": "25%",
-    "click": "var newWindow = window.open(\"https://theexhibitsource.com/contactus.htm\", \"_blank\"); newWindow.focus()",
+    "click": "var newWindow = window.open(\"https://intercontinentalsource.com/\", \"_blank\"); newWindow.focus()",
     "cursor": "hand",
     "scaleMode": "fit_inside",
     "paddingBottom": 0,
