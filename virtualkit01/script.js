@@ -472,11 +472,10 @@ TDV.PlayerAPI.defineScript({ "definitions": [
       "rollOverDisplay": false,
       "areas": [
        {
-        "class": "HotspotPanoramaOverlayArea",
-        "mapColor": "#FF0000",
         "toolTip": "Play Animation",
         "displayTooltipInTouchScreens": true,
-        "click": "if(this.isCardboardViewMode()) { this.showPopupPanoramaVideoOverlay(this.popup_3DB285D5_366D_D968_41C7_9984DF02D706, {'pressedBackgroundColorRatios':[0,0.09803921568627451,1],'pressedBackgroundColorDirection':'vertical','borderColor':'#000000','rollOverBackgroundColor':['#DDDDDD','#EEEEEE','#FFFFFF'],'paddingTop':0,'pressedIconHeight':20,'rollOverBorderSize':0,'rollOverBackgroundColorDirection':'vertical','paddingBottom':0,'pressedBorderColor':'#000000','iconLineWidth':5,'rollOverIconLineWidth':5,'pressedIconWidth':20,'pressedBackgroundColor':['#DDDDDD','#EEEEEE','#FFFFFF'],'rollOverBackgroundColorRatios':[0,0.09803921568627451,1],'iconWidth':20,'pressedIconColor':'#888888','backgroundColorDirection':'vertical','paddingLeft':0,'rollOverIconWidth':20,'rollOverIconColor':'#666666','iconHeight':20,'backgroundColor':['#DDDDDD','#EEEEEE','#FFFFFF'],'rollOverBackgroundOpacity':0.3,'pressedBorderSize':0,'borderSize':0,'backgroundOpacity':0.3,'pressedBackgroundOpacity':0.3,'iconColor':'#000000','rollOverBorderColor':'#000000','pressedIconLineWidth':5,'rollOverIconHeight':20,'backgroundColorRatios':[0,0.09803921568627451,1],'paddingRight':0}) } else { this.showPopupMedia(this.window_3D8A5798_366D_D918_41AE_B96CA92C4849, this.video_3D24018C_366A_D9F8_41C6_C00810A27035, this.PlayList_3A2EAF49_366E_E979_41B4_AF3C12497689, '100%', '100%', true, true); this.PlayList_3A2EAF49_366E_E979_41B4_AF3C12497689.set('selectedIndex', 0); ; this.viewer_uid3A293F46_366E_E96B_4199_680C83657318VideoPlayer.play(); ; this.pauseGlobalAudios() }"
+        "class": "HotspotPanoramaOverlayArea",
+        "mapColor": "#FF0000"
        }
       ],
       "maps": [
@@ -637,327 +636,6 @@ TDV.PlayerAPI.defineScript({ "definitions": [
   "id": "playList_0C8220F3_0217_7925_4177_A3813F3BC9BA"
  },
  {
-  "scaleMode": "fit_inside",
-  "class": "Video",
-  "width": 10,
-  "height": 20,
-  "id": "video_3D24018C_366A_D9F8_41C6_C00810A27035",
-  "label": "tamozz-vr-animate-Desktop",
-  "thumbnailUrl": "media/video_3D24018C_366A_D9F8_41C6_C00810A27035_t.jpg",
-  "video": {
-   "height": 20,
-   "class": "VideoResource",
-   "mp4Url": "media/video_3D24018C_366A_D9F8_41C6_C00810A27035.mp4",
-   "width": 10
-  }
- },
- {
-  "items": [
-   {
-    "media": "this.video_3D24018C_366A_D9F8_41C6_C00810A27035",
-    "start": "this.changeBackgroundWhilePlay(this.PlayList_3A2EAF49_366E_E979_41B4_AF3C12497689, 0, '#000000'); this.pauseGlobalAudiosWhilePlayItem(this.PlayList_3A2EAF49_366E_E979_41B4_AF3C12497689, 0, this.video_3D24018C_366A_D9F8_41C6_C00810A27035)",
-    "class": "VideoPlayListItem",
-    "begin": "this.fixTogglePlayPauseButton(this.viewer_uid3A293F46_366E_E96B_4199_680C83657318VideoPlayer)",
-    "player": {
-     "displayPlaybackBar": true,
-     "viewerArea": {
-      "borderRadius": 0,
-      "toolTipTextShadowColor": "#000000",
-      "progressLeft": 0,
-      "shadow": false,
-      "playbackBarProgressOpacity": 1,
-      "playbackBarHeadBorderColor": "#000000",
-      "toolTipFontSize": 12,
-      "toolTipPaddingBottom": 4,
-      "toolTipOpacity": 1,
-      "minWidth": 100,
-      "playbackBarBorderSize": 0,
-      "paddingLeft": 0,
-      "playbackBarBackgroundOpacity": 1,
-      "toolTipShadowOpacity": 1,
-      "playbackBarHeadBorderSize": 0,
-      "playbackBarHeadShadowColor": "#000000",
-      "minHeight": 50,
-      "toolTipBorderColor": "#767676",
-      "toolTipFontWeight": "normal",
-      "progressBarBackgroundColorDirection": "vertical",
-      "toolTipTextShadowBlurRadius": 3,
-      "progressOpacity": 1,
-      "progressRight": 0,
-      "playbackBarHeadShadow": true,
-      "progressBackgroundOpacity": 1,
-      "toolTipBorderRadius": 3,
-      "playbackBarOpacity": 1,
-      "playbackBarHeadShadowBlurRadius": 3,
-      "playbackBarHeadBackgroundColor": [
-       "#111111",
-       "#666666"
-      ],
-      "playbackBarLeft": 0,
-      "toolTipShadowColor": "#333333",
-      "playbackBarHeadHeight": 15,
-      "progressBarOpacity": 1,
-      "playbackBarHeadBackgroundColorRatios": [
-       0,
-       1
-      ],
-      "progressBackgroundColorRatios": [
-       0,
-       1
-      ],
-      "paddingBottom": 0,
-      "toolTipBackgroundColor": "#F6F6F6",
-      "progressBottom": 2,
-      "toolTipTextShadowOpacity": 0,
-      "progressBarBorderColor": "#000000",
-      "progressBarBackgroundColorRatios": [
-       0
-      ],
-      "playbackBarHeadOpacity": 1,
-      "progressHeight": 10,
-      "progressBackgroundColorDirection": "vertical",
-      "height": "100%",
-      "progressBorderSize": 0,
-      "playbackBarBottom": 0,
-      "playbackBarHeadBackgroundColorDirection": "vertical",
-      "progressBorderColor": "#000000",
-      "progressBarBackgroundColor": [
-       "#3399FF"
-      ],
-      "playbackBarProgressBackgroundColor": [
-       "#3399FF"
-      ],
-      "toolTipShadowVerticalLength": 0,
-      "progressBackgroundColor": [
-       "#FFFFFF",
-       "#000000"
-      ],
-      "id": "viewer_uid3AEFBE60_37ED_2B28_41C5_83941CE6FB54",
-      "playbackBarProgressBackgroundColorDirection": "vertical",
-      "paddingRight": 0,
-      "toolTipShadowBlurRadius": 3,
-      "playbackBarHeadShadowOpacity": 0.7,
-      "playbackBarHeadShadowVerticalLength": 0,
-      "progressBorderRadius": 0,
-      "playbackBarProgressBackgroundColorRatios": [
-       0
-      ],
-      "playbackBarBackgroundColor": [
-       "#FFFFFF"
-      ],
-      "toolTipPaddingRight": 6,
-      "playbackBarHeight": 10,
-      "playbackBarBorderColor": "#FFFFFF",
-      "toolTipPaddingLeft": 6,
-      "playbackBarHeadWidth": 6,
-      "borderSize": 0,
-      "playbackBarProgressBorderSize": 0,
-      "playbackBarHeadShadowHorizontalLength": 0,
-      "width": "100%",
-      "playbackBarBackgroundColorDirection": "vertical",
-      "playbackBarRight": 0,
-      "toolTipShadowSpread": 0,
-      "progressBarBorderRadius": 0,
-      "class": "ViewerArea",
-      "progressBarBorderSize": 0,
-      "toolTipFontColor": "#606060",
-      "paddingTop": 0,
-      "toolTipFontFamily": "Arial",
-      "transitionMode": "blending",
-      "playbackBarProgressBorderRadius": 0,
-      "toolTipShadowHorizontalLength": 0,
-      "playbackBarBorderRadius": 0,
-      "toolTipFontStyle": "normal",
-      "toolTipBorderSize": 1,
-      "toolTipPaddingTop": 4,
-      "playbackBarProgressBorderColor": "#000000",
-      "playbackBarHeadBorderRadius": 0
-     },
-     "class": "VideoPlayer",
-     "id": "viewer_uid3A293F46_366E_E96B_4199_680C83657318VideoPlayer"
-    }
-   }
-  ],
-  "class": "PlayList",
-  "id": "PlayList_3A2EAF49_366E_E979_41B4_AF3C12497689"
- },
- {
-  "veilShowEffect": {
-   "duration": 500,
-   "class": "FadeInEffect",
-   "easing": "cubic_in_out"
-  },
-  "shadow": true,
-  "bodyPaddingLeft": 0,
-  "veilHideEffect": {
-   "duration": 500,
-   "class": "FadeOutEffect",
-   "easing": "cubic_in_out"
-  },
-  "closeButtonRollOverIconLineWidth": 5,
-  "headerPaddingRight": 0,
-  "minWidth": 20,
-  "closeButtonPressedBackgroundOpacity": 0.3,
-  "bodyPaddingRight": 0,
-  "closeButtonBorderRadius": 0,
-  "paddingLeft": 0,
-  "bodyPaddingBottom": 0,
-  "scrollBarVisible": "rollOver",
-  "scrollBarWidth": 10,
-  "modal": true,
-  "minHeight": 20,
-  "footerBackgroundColorRatios": [
-   0,
-   0.9,
-   1
-  ],
-  "bodyBackgroundColor": [
-   "#FFFFFF",
-   "#DDDDDD",
-   "#FFFFFF"
-  ],
-  "closeButtonPressedBackgroundColorRatios": [
-   0,
-   0.1,
-   1
-  ],
-  "closeButtonPressedBorderSize": 0,
-  "scrollBarMargin": 2,
-  "closeButtonRollOverIconColor": "#666666",
-  "closeButtonIconColor": "#000000",
-  "footerBackgroundOpacity": 0,
-  "closeButtonPaddingBottom": 0,
-  "verticalAlign": "middle",
-  "footerBackgroundColor": [
-   "#FFFFFF",
-   "#EEEEEE",
-   "#DDDDDD"
-  ],
-  "closeButtonBackgroundOpacity": 0.3,
-  "shadowSpread": 1,
-  "closeButtonBorderSize": 0,
-  "closeButtonPressedBackgroundColor": [
-   "#DDDDDD",
-   "#EEEEEE",
-   "#FFFFFF"
-  ],
-  "bodyPaddingTop": 0,
-  "titleFontSize": 14,
-  "veilOpacity": 0.4,
-  "closeButtonIconWidth": 20,
-  "headerBackgroundColor": [
-   "#DDDDDD",
-   "#EEEEEE",
-   "#FFFFFF"
-  ],
-  "closeButtonRollOverBackgroundColorDirection": "vertical",
-  "paddingBottom": 0,
-  "scrollBarColor": "#000000",
-  "backgroundColorDirection": "vertical",
-  "close": "this.PlayList_3A2EAF49_366E_E979_41B4_AF3C12497689.set('selectedIndex', -1);; this.resumeGlobalAudios()",
-  "shadowBlurRadius": 6,
-  "id": "window_3D8A5798_366D_D918_41AE_B96CA92C4849",
-  "children": [
-   "this.viewer_uid3AEFBE60_37ED_2B28_41C5_83941CE6FB54"
-  ],
-  "closeButtonPressedIconColor": "#888888",
-  "closeButtonRollOverBackgroundOpacity": 0.3,
-  "shadowColor": "#000000",
-  "titlePaddingBottom": 5,
-  "hideEffect": {
-   "duration": 500,
-   "class": "FadeOutEffect",
-   "easing": "cubic_in_out"
-  },
-  "layout": "vertical",
-  "paddingRight": 0,
-  "showEffect": {
-   "duration": 500,
-   "class": "FadeInEffect",
-   "easing": "cubic_in_out"
-  },
-  "titleFontFamily": "Arial",
-  "headerPaddingTop": 10,
-  "bodyBackgroundColorDirection": "vertical",
-  "closeButtonRollOverBorderSize": 0,
-  "closeButtonRollOverBorderColor": "#000000",
-  "closeButtonRollOverBackgroundColorRatios": [
-   0,
-   0.1,
-   1
-  ],
-  "shadowOpacity": 0.5,
-  "footerHeight": 5,
-  "bodyBackgroundOpacity": 0,
-  "closeButtonBackgroundColor": [
-   "#DDDDDD",
-   "#EEEEEE",
-   "#FFFFFF"
-  ],
-  "borderSize": 0,
-  "closeButtonPressedIconLineWidth": 5,
-  "titlePaddingLeft": 5,
-  "overflow": "scroll",
-  "titlePaddingRight": 5,
-  "closeButtonBackgroundColorDirection": "vertical",
-  "class": "Window",
-  "closeButtonBorderColor": "#000000",
-  "paddingTop": 0,
-  "closeButtonRollOverBackgroundColor": [
-   "#DDDDDD",
-   "#EEEEEE",
-   "#FFFFFF"
-  ],
-  "headerBackgroundColorDirection": "vertical",
-  "veilColorRatios": [
-   0,
-   1
-  ],
-  "closeButtonPaddingRight": 0,
-  "headerPaddingLeft": 10,
-  "veilColor": [
-   "#000000",
-   "#000000"
-  ],
-  "closeButtonIconHeight": 20,
-  "footerBackgroundColorDirection": "vertical",
-  "headerBackgroundOpacity": 0,
-  "headerBackgroundColorRatios": [
-   0,
-   0.1,
-   1
-  ],
-  "closeButtonPaddingLeft": 0,
-  "closeButtonPressedBackgroundColorDirection": "vertical",
-  "closeButtonIconLineWidth": 5,
-  "shadowHorizontalLength": 3,
-  "shadowVerticalLength": 0,
-  "closeButtonBackgroundColorRatios": [
-   0,
-   0.1,
-   1
-  ],
-  "gap": 10,
-  "scrollBarOpacity": 0.5,
-  "headerPaddingBottom": 5,
-  "backgroundColor": [],
-  "horizontalAlign": "center",
-  "contentOpaque": false,
-  "bodyBackgroundColorRatios": [
-   0,
-   0.5,
-   1
-  ],
-  "titlePaddingTop": 5,
-  "headerVerticalAlign": "middle",
-  "borderRadius": 5,
-  "backgroundOpacity": 1,
-  "closeButtonPressedBorderColor": "#000000",
-  "backgroundColorRatios": [],
-  "closeButtonPaddingTop": 0
- },
- "this.popup_3DB285D5_366D_D968_41C7_9984DF02D706",
- {
   "class": "MediaAudio",
   "autoplay": true,
   "id": "audio_0B054FF3_01C3_0BB5_412A_75378B1B73A4",
@@ -965,6 +643,36 @@ TDV.PlayerAPI.defineScript({ "definitions": [
    "oggUrl": "media/audio_0B054FF3_01C3_0BB5_412A_75378B1B73A4.ogg",
    "class": "AudioResource",
    "mp3Url": "media/audio_0B054FF3_01C3_0BB5_412A_75378B1B73A4.mp3"
+  }
+ },
+ {
+  "scaleMode": "fit_inside",
+  "class": "Video",
+  "width": 206,
+  "height": 412,
+  "id": "video_3947963F_36AA_DB18_41C5_9CA554196995",
+  "label": "tamozz-vr-animate-Desktop",
+  "thumbnailUrl": "media/video_3947963F_36AA_DB18_41C5_9CA554196995_t.jpg",
+  "video": {
+   "height": 412,
+   "class": "VideoResource",
+   "mp4Url": "media/video_3947963F_36AA_DB18_41C5_9CA554196995.mp4",
+   "width": 206
+  }
+ },
+ {
+  "scaleMode": "fit_inside",
+  "class": "Video",
+  "width": 10,
+  "height": 20,
+  "id": "video_396D3393_36A5_79E8_41C2_184124070B4F",
+  "label": "tamozz-vr-animate-Desktop",
+  "thumbnailUrl": "media/video_396D3393_36A5_79E8_41C2_184124070B4F_t.jpg",
+  "video": {
+   "height": 20,
+   "class": "VideoResource",
+   "mp4Url": "media/video_396D3393_36A5_79E8_41C2_184124070B4F.mp4",
+   "width": 10
   }
  }
 ], "children": [
@@ -1325,117 +1033,6 @@ TDV.PlayerAPI.defineScript({ "definitions": [
   "shadowColor": "#333333",
   "shadow": true,
   "paddingRight": 0
- },
- {
-  "backgroundColorRatios": [
-   0
-  ],
-  "showEffect": {
-   "duration": 350,
-   "class": "FadeInEffect",
-   "easing": "cubic_in_out"
-  },
-  "top": 0,
-  "bottom": 0,
-  "minWidth": 0,
-  "paddingLeft": 0,
-  "borderSize": 0,
-  "minHeight": 0,
-  "class": "UIComponent",
-  "paddingTop": 0,
-  "left": 0,
-  "paddingBottom": 0,
-  "right": 0,
-  "backgroundColor": [
-   "#000000"
-  ],
-  "backgroundOpacity": 0.55,
-  "id": "veilPopupPanorama",
-  "borderRadius": 0,
-  "visible": false,
-  "backgroundColorDirection": "vertical",
-  "shadow": false,
-  "paddingRight": 0
- },
- {
-  "backgroundColorRatios": [],
-  "top": 0,
-  "bottom": 0,
-  "minWidth": 0,
-  "paddingLeft": 0,
-  "borderSize": 0,
-  "minHeight": 0,
-  "scaleMode": "custom",
-  "class": "ZoomImage",
-  "paddingTop": 0,
-  "left": 0,
-  "paddingBottom": 0,
-  "right": 0,
-  "backgroundColor": [],
-  "backgroundOpacity": 1,
-  "id": "zoomImagePopupPanorama",
-  "borderRadius": 0,
-  "visible": false,
-  "backgroundColorDirection": "vertical",
-  "shadow": false,
-  "paddingRight": 0
- },
- {
-  "fontFamily": "Arial",
-  "horizontalAlign": "center",
-  "fontSize": 12,
-  "backgroundColorRatios": [
-   0,
-   0.1,
-   1
-  ],
-  "label": "",
-  "showEffect": {
-   "duration": 350,
-   "class": "FadeInEffect",
-   "easing": "cubic_in_out"
-  },
-  "layout": "horizontal",
-  "top": 10,
-  "iconBeforeLabel": true,
-  "minWidth": 0,
-  "iconHeight": 20,
-  "paddingLeft": 5,
-  "fontStyle": "normal",
-  "rollOverIconColor": "#666666",
-  "borderSize": 0,
-  "iconWidth": 20,
-  "minHeight": 0,
-  "verticalAlign": "middle",
-  "mode": "push",
-  "borderColor": "#000000",
-  "class": "CloseButton",
-  "fontWeight": "normal",
-  "paddingTop": 5,
-  "fontColor": "#FFFFFF",
-  "shadowSpread": 1,
-  "iconLineWidth": 5,
-  "cursor": "hand",
-  "pressedIconColor": "#888888",
-  "paddingBottom": 5,
-  "right": 10,
-  "gap": 5,
-  "textDecoration": "none",
-  "backgroundColor": [
-   "#DDDDDD",
-   "#EEEEEE",
-   "#FFFFFF"
-  ],
-  "backgroundOpacity": 0.3,
-  "id": "closeButtonPopupPanorama",
-  "iconColor": "#000000",
-  "borderRadius": 0,
-  "shadowBlurRadius": 6,
-  "visible": false,
-  "backgroundColorDirection": "vertical",
-  "shadowColor": "#000000",
-  "shadow": false,
-  "paddingRight": 5
  }
 ], 
  "horizontalAlign": "left",
@@ -1474,7 +1071,6 @@ TDV.PlayerAPI.defineScript({ "definitions": [
   "loopAlbum": function(playList, index){    var playListItem = playList.get('items')[index];   var player = playListItem.get('player');   var loopFunction = function(){       player.play();   };   this.executeFunctionWhenChange(playList, index, loopFunction); },
   "setComponentVisibility": function(component, visible, applyAt, effect, propertyEffect, ignoreClearTimeout){    this.unregisterKey('visibility_'+component.get('id'));   var changeVisibility = function(){        if(effect && propertyEffect){            component.set(propertyEffect, effect);        }        component.set('visible', visible);       if(component.get('class') == 'ViewerArea'){           try{               if(visible) component.restart();               else        component.pause();           }           catch(e){};       }   };   var effectTimeoutName = 'effectTimeout_'+component.get('id');   if(!ignoreClearTimeout && window.hasOwnProperty(effectTimeoutName)){       var effectTimeout = window[effectTimeoutName];       if(effectTimeout instanceof Array){           for(var i=0; i<effectTimeout.length; i++){ clearTimeout(effectTimeout[i]) }       }else{           clearTimeout(effectTimeout);       }       delete window[effectTimeoutName];   }   else if(visible == component.get('visible') && !ignoreClearTimeout)       return;   if(applyAt && applyAt > 0){       var effectTimeout = setTimeout(function(){            if(window[effectTimeoutName] instanceof Array) {                var arrayTimeoutVal = window[effectTimeoutName];               var index = arrayTimeoutVal.indexOf(effectTimeout);               arrayTimeoutVal.splice(index, 1);               if(arrayTimeoutVal.length == 0){                   delete window[effectTimeoutName];               }           }else{               delete window[effectTimeoutName];            }           changeVisibility();        }, applyAt);       if(window.hasOwnProperty(effectTimeoutName)){           window[effectTimeoutName] = [window[effectTimeoutName], effectTimeout];       }else{           window[effectTimeoutName] = effectTimeout;       }   }   else{       changeVisibility();   } },
   "isCardboardViewMode": function(){    var players = this.getByClassName('PanoramaPlayer');   return players.length > 0 && players[0].get('viewMode') == 'cardboard'; },
-  "showPopupPanoramaOverlay": function(popupPanoramaOverlay, closeButtonProperties, imageHD, toggleImage, toggleImageHD, autoCloseMilliSeconds, audio, stopBackgroundAudio){    var self = this;   this.MainViewer.set('toolTipEnabled', false);   var cardboardEnabled = this.isCardboardViewMode();   if(!cardboardEnabled) {       var zoomImage = this.zoomImagePopupPanorama;       var showDuration = popupPanoramaOverlay.get('showDuration');       var hideDuration = popupPanoramaOverlay.get('hideDuration');       var playersPaused = this.pauseCurrentPlayers(audio == null || !stopBackgroundAudio);       var popupMaxWidthBackup = popupPanoramaOverlay.get('popupMaxWidth');       var popupMaxHeightBackup = popupPanoramaOverlay.get('popupMaxHeight');       var showEndFunction = function() {           var loadedFunction = function(){               if(!self.isCardboardViewMode())                   popupPanoramaOverlay.set('visible', false);           };           popupPanoramaOverlay.unbind('showEnd', showEndFunction, self);           popupPanoramaOverlay.set('showDuration', 1);           popupPanoramaOverlay.set('hideDuration', 1);           self.showPopupImage(imageHD, toggleImageHD, popupPanoramaOverlay.get('popupMaxWidth'), popupPanoramaOverlay.get('popupMaxHeight'), null, null,            closeButtonProperties, autoCloseMilliSeconds, audio, stopBackgroundAudio, loadedFunction, hideFunction);       };       var hideFunction = function() {           var restoreShowDurationFunction = function(){                popupPanoramaOverlay.unbind('showEnd', restoreShowDurationFunction, self);                popupPanoramaOverlay.set('visible', false);               popupPanoramaOverlay.set('showDuration', showDuration);               popupPanoramaOverlay.set('popupMaxWidth', popupMaxWidthBackup);               popupPanoramaOverlay.set('popupMaxHeight', popupMaxHeightBackup);           };           self.resumePlayers(playersPaused, audio == null || !stopBackgroundAudio);           var currentWidth = zoomImage.get('imageWidth');           var currentHeight = zoomImage.get('imageHeight');           popupPanoramaOverlay.bind('showEnd', restoreShowDurationFunction, self, true);           popupPanoramaOverlay.set('showDuration', 1);           popupPanoramaOverlay.set('hideDuration', hideDuration);           popupPanoramaOverlay.set('popupMaxWidth', currentWidth);           popupPanoramaOverlay.set('popupMaxHeight', currentHeight);          if(popupPanoramaOverlay.get('visible'))              restoreShowDurationFunction();          else              popupPanoramaOverlay.set('visible', true);           self.MainViewer.set('toolTipEnabled', true);       };       if(!imageHD){           imageHD = popupPanoramaOverlay.get('image');       }       if(!toggleImageHD && toggleImage){           toggleImageHD = toggleImage;       }       popupPanoramaOverlay.bind('showEnd', showEndFunction, this, true);   } else {       var hideEndFunction = function() {           self.resumePlayers(playersPaused, audio == null || stopBackgroundAudio);           if(audio){               if(stopBackgroundAudio){                   self.resumeGlobalAudios();               }               self.stopGlobalAudio(audio);           }           popupPanoramaOverlay.unbind('hideEnd', hideEndFunction, self);           self.MainViewer.set('toolTipEnabled', true);       };       var playersPaused = this.pauseCurrentPlayers(audio == null || !stopBackgroundAudio);       if(audio){           if(stopBackgroundAudio){               this.pauseGlobalAudios();           }           this.playGlobalAudio(audio);       }       popupPanoramaOverlay.bind('hideEnd', hideEndFunction, this, true);   }   popupPanoramaOverlay.set('visible', true); },
   "stopGlobalAudio": function(audio){    var audios = window.currentGlobalAudios;   if(audios){       audio = audios[audio.get('id')];       delete audios[audio.get('id')];   }   audio.stop(); },
   "updateVideoCues": function(playList, index){    var playListItem = playList.get('items')[index];   var video = playListItem.get('media');   if(video.get('cues').length == 0)       return;   var player = playListItem.get('player');   var cues = [];   var changeFunction = function(){       if(playList.get('selectedIndex') != index){           video.unbind('cueChange', cueChangeFunction, this);           playList.unbind('change', changeFunction, this);       }   };   var cueChangeFunction = function(event){       var activeCues = event.data.activeCues;       for(var i = 0, count = cues.length; i<count; ++i){           var cue = cues[i];           if(activeCues.indexOf(cue) == -1 && (cue.get('startTime') > player.get('currentTime') || cue.get('endTime') < player.get('currentTime')+0.5)){               cue.trigger('end');           }       }       cues = activeCues;   };   video.bind('cueChange', cueChangeFunction, this);   playList.bind('change', changeFunction, this); },
   "showPopupMedia": function(w, media, playList, popupMaxWidth, popupMaxHeight, autoCloseWhenFinished, containsAudio){    var self = this;   var closeFunction = function(){       self.MainViewer.set('toolTipEnabled', true);       this.resumePlayers(playersPaused, !containsAudio);       if(isVideo) {           this.unbind('resize', resizeFunction, this);       }       w.unbind('close', closeFunction, this);   };   var endFunction = function(){       w.hide();   };   var resizeFunction = function(){       var parentWidth = self.get('actualWidth');       var parentHeight = self.get('actualHeight');       var mediaWidth = media.get('width');       var mediaHeight = media.get('height');       var popupMaxWidthNumber = parseFloat(popupMaxWidth) / 100;       var popupMaxHeightNumber = parseFloat(popupMaxHeight) / 100;       var windowWidth = popupMaxWidthNumber * parentWidth;       var windowHeight = popupMaxHeightNumber * parentHeight;       var footerHeight = w.get('footerHeight');       var headerHeight = w.get('headerHeight');       if(!headerHeight) {           var closeButtonHeight = w.get('closeButtonIconHeight') + w.get('closeButtonPaddingTop') + w.get('closeButtonPaddingBottom');           var titleHeight = w.get('titleFontSize') + w.get('titlePaddingTop') + w.get('titlePaddingBottom');           headerHeight = closeButtonHeight > titleHeight ? closeButtonHeight : titleHeight;           headerHeight += w.get('headerPaddingTop') + w.get('headerPaddingBottom');       }       if(!footerHeight) {           footerHeight = 0;       }       var contentWindowWidth = windowWidth - w.get('bodyPaddingLeft') - w.get('bodyPaddingRight') - w.get('paddingLeft') - w.get('paddingRight');       var contentWindowHeight = windowHeight - headerHeight - footerHeight - w.get('bodyPaddingTop') - w.get('bodyPaddingBottom') - w.get('paddingTop') - w.get('paddingBottom');       var parentAspectRatio = contentWindowWidth / contentWindowHeight;       var mediaAspectRatio = mediaWidth / mediaHeight;       if(parentAspectRatio > mediaAspectRatio) {           windowWidth = contentWindowHeight * mediaAspectRatio + w.get('bodyPaddingLeft') + w.get('bodyPaddingRight') + w.get('paddingLeft') + w.get('paddingRight');       }       else {           windowHeight = contentWindowWidth / mediaAspectRatio + headerHeight + footerHeight + w.get('bodyPaddingTop') + w.get('bodyPaddingBottom') + w.get('paddingTop') + w.get('paddingBottom');       }       if(windowWidth > parentWidth * popupMaxWidthNumber) {           windowWidth = parentWidth * popupMaxWidthNumber;       }       if(windowHeight > parentHeight * popupMaxHeightNumber) {           windowHeight = parentHeight * popupMaxHeightNumber;       }       w.set('width', windowWidth);       w.set('height', windowHeight);       w.set('x', (parentWidth - w.get('actualWidth')) * 0.5);       w.set('y', (parentHeight - w.get('actualHeight')) * 0.5);   };   if(autoCloseWhenFinished){       this.executeFunctionWhenChange(playList, 0, endFunction);   }   var isVideo = media.get('class') == 'Video';   if(isVideo){       this.bind('resize', resizeFunction, this);       resizeFunction();   }   else {       w.set('width', popupMaxWidth);       w.set('height', popupMaxHeight);   }   this.MainViewer.set('toolTipEnabled', false);   var playersPaused = this.pauseCurrentPlayers(!containsAudio);   w.bind('close', closeFunction, this);   w.show(this, true); },
