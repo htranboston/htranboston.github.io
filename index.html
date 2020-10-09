@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="./js/three.min.js"></script>
+	<script type="text/javascript" src="./js/panolens.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -14,17 +16,20 @@
 	<link rel="stylesheet" type="text/css" href="./css/wordcarousel.css">
 	<link rel="stylesheet" type="text/css" href="./css/simpletransition.css">
 	<style type="text/css">
-		body {
-			background-color: black;
-			opacity: 0;
-			transition: 1.1s ease-in;
+		html, body {
+		  width: 100%;
+		  height: 100%;
+		  overflow: hidden;
+		  margin: 0;
+		  position: relative;
 		}
-		.row.partner {
-			height: 200px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			word-spacing: 10px;
+		#container {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		.header {
+			position: absolute;
 		}
 		.row.topmenu {
 			display: flex;
@@ -32,16 +37,12 @@
 		}
 		a.links {
 			font: italic 800 1.2vw Muli, san-serif;
-			color: black;
+			color: white;
 		}
 		a.links:hover {
 			color: #996633;
 			text-decoration: none;
 			cursor: pointer;
-		}
-		.content {
-    		position: relative;
-    		padding-top: 56.25%
 		}			
 		.wordCarousel {
 			position: absolute;
@@ -52,11 +53,9 @@
 			height: 100%;
 			display: flex;
 			align-items: center;
-			background-image: url("./images/home-bg.jpg");
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
-
 		}
 		a.active {
 			color: gold;
@@ -72,30 +71,12 @@
 		.sidenav, .row.sidemenu {
 			display: none;
 		}
-		.partner-logo:hover {
-			cursor: pointer;
-			border: 2px solid yellow;
-		}
-		.partner-logo {
-			max-width: 190px;
-			max-height: 190px;
-			display: inline-block;
-			padding: 5px;
-		}
-		@media only screen and (max-width: 1024px) {
-			.partner-logo {
-				max-width: 15%;
-				display: inline-block;
-				padding: 5px;
-			}
 		@media only screen and (max-width: 768px) {
+			.header {
+				position: absolute;
+			}
 			.row.topmenu {
 				display: none;
-			}
-			.partner-logo {
-				max-width: 180px;
-				display: inline-block;
-				padding: 5px;
 			}
 			.row.sidemenu {
 				display: flex;
@@ -153,69 +134,47 @@
 	</style>
 </head>
 <body>
-<div class="sidenav">
-	<div><a class="links active" href="#">HOME</a></div>
-	<div><a class="links" href="about.html">ABOUT</a></div>
-	<div><a class="links" href="portfolio.html">PORFOLIO</a></div>
-	<div><a class="links" href="journal.html">BLOG</a></div>
-	<div><a class="links" href="contact.html">CONTACT</a></div>
-</div>
-<div class="container-fluid header">
-	<div class="row topmenu">
-		<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
-		<div class="col-sm-1 pt-0" ><a class="links active" href="#">HOME</a></div>
-		<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
-		<div class="col-sm-1 pt-0"><a class="links" href="portfolio.html">PORFOLIO</a></div>
-		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div>
-		<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
+<div id="container">
+	<div class="content" id="content">
+		<h4 class="wordCarousel">    
+	        <span>Hi, My name is Huy Tran. I'm </span>  
+	        <div> 
+	        <!-- Use classes 2,3, or 4 to match the number of words --> 
+	            <ul class="flip5"> 
+	                <li>(Creative)</li>
+	                <li>(Reliable)</li>
+	                <li>(Curious)</li> 
+	                <li>(Eccentric)</li>  
+	            </ul>
+	        </div>  
+	    </h4>
 	</div>
-	<div class="row sidemenu">
-			<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
-			<img class="logo" src="./images/logo-white.png">
-			<button onclick="closesidemenu()" class="closebt">
-					<i class="fa fa-window-close" aria-hidden="true"></i>
-			</button>
+	<div class="sidenav">
+		<div><a class="links active" href="#">HOME</a></div>
+		<div><a class="links" href="about.html">ABOUT</a></div>
+		<div><a class="links" href="portfolio.html">PORFOLIO</a></div>
+		<div><a class="links" href="journal.html">BLOG</a></div>
+		<div><a class="links" href="contact.html">CONTACT</a></div>
 	</div>
-</div>
-<div class="container-fluid body">
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="content" id="content">
-				<h4 class="wordCarousel">    
-			        <span>Hi, My name is Huy Tran. I'm </span>  
-			        <div> 
-			        <!-- Use classes 2,3, or 4 to match the number of words --> 
-			            <ul class="flip5"> 
-			                <li>(Creative)</li>
-			                <li>(Reliable)</li>
-			                <li>(Curious)</li> 
-			                <li>(Eccentric)</li>  
-			            </ul>
-			        </div>  
-			    </h4>
-			</div>
+	<div class="container-fluid header">
+		<div class="row topmenu">
+			<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
+			<div class="col-sm-1 pt-0" ><a class="links active" href="#">HOME</a></div>
+			<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
+			<div class="col-sm-1 pt-0"><a class="links" href="portfolio.html">PORFOLIO</a></div>
+			<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div>
+			<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
 		</div>
-	</div>
-	<h4 style="text-align: center; color: white; margin-top: 20px;">Also a Proud Owner & Creator of</h4>
-	<div class="row partner">
-		<div class="col-sm-12" style="background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(67,161,168,1), rgba(0,0,0,0.1)); padding: 10px 0;">
-			<a href="https://intercontinentalsource.com/" target="_blank"><img src="./images/intsource-home.jpg" class="partner-logo"></a>
-			<a href="https://doremall.com/" target="_blank"><img src="./images/doremall-home.jpg" class="partner-logo"></a>
-			<a href="https://soccerbetbuddy.com/" target="_blank"><img src="./images/soccer-home.jpg" class="partner-logo"></a>
-			<a href="todo.html" target="_blank"><img src="./images/todolist.jpg" class="partner-logo"></a>
-			<a href="tradingcalculator.html" target="_blank"><img src="./images/trade-calc.jpg" class="partner-logo"></a>
+		<div class="row sidemenu">
+				<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
+				<img class="logo" src="./images/logo-white.png">
+				<button onclick="closesidemenu()" class="closebt">
+						<i class="fa fa-window-close" aria-hidden="true"></i>
+				</button>
 		</div>
-		<p style="color: white; margin-top: 50px;">Copyright &copy; 2020 HT Creative Studio</p>
 	</div>
 </div>
 <script type="text/javascript">
-	window.onload = function() {
-		 var player = document.getElementsByClassName("body")[0];
-		 console.log(player);
-		 player.className += " animate_content";
-		 document.body.style.backgroundColor = "#AEBFBC";
-		 document.body.style.opacity = 1;
-	}
 	function opensidemenu() {
 		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
 		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
@@ -226,6 +185,31 @@
 		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
 		document.body.style.backgroundColor = "#AEBFBC";
 	}
+
+	// Panorama function
+
+	var panorama, panorama2, viewer, container, infospot;
+
+	container = document.querySelector( '#container' );
+
+	panorama = new PANOLENS.ImagePanorama( 'https://htranboston.github.io/images/view1.jpg' );
+	panorama2 = new PANOLENS.ImagePanorama( 'https://pchen66.github.io/Panolens/examples/asset/textures/equirectangular/sunset.jpg' );
+
+	infospot = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
+	infospot.position.set( -100, 1500, -5000); //x,z,y
+	infospot.addHoverText( "The Story" );
+	infospot.addEventListener( 'click', function(){
+	  viewer.setPanorama( panorama2 );
+	} );
+
+	panorama.add( infospot );
+
+	viewer = new PANOLENS.Viewer( { container: container } );
+	viewer.add( panorama, panorama2 );
+
+	viewer.addUpdateCallback(function(){
+	  
+	});
 </script>
 </body>
 </html>
