@@ -37,7 +37,7 @@
 		}
 		a.links {
 			font: italic 800 1.2vw Muli, san-serif;
-			color: white;
+			color: black;
 		}
 		a.links:hover {
 			color: #996633;
@@ -91,7 +91,7 @@
 				position: fixed;
 				background-color: #eee;
 				height: 100%;
-				z-index: 1;
+				z-index: 100;
 				overflow-x: hidden;
 				top: 0;
 				transition: width 0.5s;
@@ -198,10 +198,16 @@
 	//Link to soccerbetbuddy
 	infospot1 = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
 	infospot1.position.set( 2800, -500, -5000); //x,z,y
+	// var soccerLink = document.createElement('P');
+	// var soccerLinkAtt = document.createAttribute("src");
+	// soccerLinkAtt.value = "https://soccerbetbuddy.com";
+	// soccerLink.setAttributeNode(soccerLinkAtt);
+	// soccerLink.innerHTML = "Test";
+	// infospot1.addHoverElement(soccerLink);
 	infospot1.addHoverText( "Soccer Bet Buddy" );
 	infospot1.addEventListener( 'click', function(){
 	  // viewer.setPanorama( panorama2 );
-	  window.open("https://soccerbetbuddy.com")
+	  window.open("https://soccerbetbuddy.com");
 	} );
 
 	//Link to projects
