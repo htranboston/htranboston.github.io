@@ -195,14 +195,25 @@
 	panorama = new PANOLENS.ImagePanorama( 'https://htranboston.github.io/images/livingroom.jpg' );
 	panorama2 = new PANOLENS.ImagePanorama( 'https://pchen66.github.io/Panolens/examples/asset/textures/equirectangular/sunset.jpg' );
 
-	infospot = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
-	infospot.position.set( -100, 1500, -5000); //x,z,y
-	infospot.addHoverText( "The Story" );
-	infospot.addEventListener( 'click', function(){
-	  viewer.setPanorama( panorama2 );
+	//Link to soccerbetbuddy
+	infospot1 = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
+	infospot1.position.set( 2800, -500, -5000); //x,z,y
+	infospot1.addHoverText( "Soccer Bet Buddy" );
+	infospot1.addEventListener( 'click', function(){
+	  // viewer.setPanorama( panorama2 );
+	  window.open("https://soccerbetbuddy.com")
 	} );
 
-	panorama.add( infospot );
+	//Link to projects
+	infospot2 = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
+	infospot2.position.set( -2800, 1500, -5000); //x,z,y
+	infospot2.addHoverText( "Projects" );
+	infospot2.addEventListener( 'click', function(){
+	  // viewer.setPanorama( panorama2 );
+	  window.open("https://htranboston.github.io/portfolio.html")
+	} );
+
+	panorama.add( infospot1, infospot2 );
 
 	viewer = new PANOLENS.Viewer( { container: container } );
 	viewer.add( panorama, panorama2 );
