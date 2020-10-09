@@ -166,9 +166,9 @@
 			<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
 		</div>
 		<div class="row sidemenu">
-				<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
+				<button onclick="opensidemenu()" class="openbt" id="touchOpen"><i class="fa fa-bars"></i></button>
 				<img class="logo" src="./images/logo-white.png">
-				<button onclick="closesidemenu()" class="closebt">
+				<button onclick="closesidemenu()" class="closebt" id="touchClose">
 						<i class="fa fa-window-close" aria-hidden="true"></i>
 				</button>
 		</div>
@@ -179,12 +179,34 @@
 		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
 		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
 		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
-	}
+	} 
+
 	function closesidemenu() {
 		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
 		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
 		document.body.style.backgroundColor = "#AEBFBC";
 	}
+
+	// Touch function for mobile
+	$('#touchOpen').on('click touchend', function(event) {
+   		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+	});  
+	$('#touchClose').on('click touchend', function(event) {
+   		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+	});
+
+	var mobileLinks = document.getElementsByClassName("links");
+	for(let i=0; i<mobileLinks.length; i++) {
+		mobileLinks[i].addEventListener('touchend', process_touchend, false);
+	}
+
+	function process_touchend(ev) {
+		window.open(ev.currentTarget, "_self");
+	} 
 
 	// Panorama function
 
