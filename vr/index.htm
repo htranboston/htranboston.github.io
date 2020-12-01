@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="The Exhibit Source Virtual Tour"/>
+<script>
+    function passwordCheck(){
+    var password = prompt("Please enter the password.");
+    if (password==="vrtrend83"){
+        window.location="vrexperience.html";
+    } else{
+        while(password !=="vrtrend83"){
+            password = prompt("Please enter the password.");
+        }
+        window.location="vrexperience.html";
+    }
+}
+window.onload=passwordCheck;
+</script>
+<body>
+</body>
+</html>
