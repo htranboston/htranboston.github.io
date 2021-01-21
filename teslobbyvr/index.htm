@@ -200,7 +200,7 @@ loadTour()
     <style type="text/css">
         html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
         #viewer { background-color: #FFFFFF; z-index:1; position:absolute; width: 100%; height: 100%; top: 0; }
-        #preloadContainer { z-index:2; position:relative; width:100%; height:100%; transition: opacity 1s; -webkit-transition: opacity 1s; -moz-transition: opacity 1s; -o-transition: opacity 1s;}
+        #preloadContainer { z-index:2; p
     </style>
 </head>
 <body onload="onLoad()">
@@ -208,8 +208,9 @@ loadTour()
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5Z5J88"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<button style="z-index: 999; position: relative;">Test Hit</button>
     <div id="preloadContainer" style="background-color:rgba(255,255,255,1)"><div style="z-index: 4; position: absolute; background-image: url('loading/HTMLImage_C55A74B1_CDF4_6679_41D6_6C2C25A8F828.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center center; overflow: hidden; right: 41.17%; bottom: 50.74%; width: 17.75%; height: 18.65%"></div><div style="z-index: 5; position: absolute; left: 0%; top: 50%; width: 100.00%; height: 10.00%"><div style="text-align:left; color:#000; "><DIV STYLE="text-align:center;"><SPAN STYLE="letter-spacing:0px;color:#777777;font-size:14px;font-family:Arial, Helvetica, sans-serif;">Loading virtual tour. Please wait...</SPAN></DIV><p STYLE="margin:0; line-height:12px;"><BR STYLE="letter-spacing:0px;color:#000000;font-size:12px;font-family:Arial, Helvetica, sans-serif;"/></p></div></div></div>
-    <div id="viewer"></div>
+    <div id="viewer" style="position: relative;">
+        <button style="position: absolute; left: 200px; top: 200px;">Test Hit</button>
+    </div>
 </body>
 </html>
