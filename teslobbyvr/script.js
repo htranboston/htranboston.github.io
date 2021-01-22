@@ -218,6 +218,7 @@ TDV.PlayerAPI.defineScript({ "definitions": [
            "height": 103,
            "class": "ImageResourceLevel",
            "width": 80
+            "label": "Left Hall"
           }
          ]
         },
@@ -234,9 +235,7 @@ TDV.PlayerAPI.defineScript({ "definitions": [
         "class": "HotspotPanoramaOverlayArea",
         "mapColor": "#FF0000",
         "click": "this.mainPlayList.set('selectedIndex', 2)",
-        "toolTip": "Left Hall",
-        "url": "https://yahoo.com",
-        "label": "Left Hall"
+        "toolTip": "Left Hall"
        }
       ],
       "maps": [
