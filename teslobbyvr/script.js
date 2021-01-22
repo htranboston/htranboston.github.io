@@ -234,7 +234,8 @@ TDV.PlayerAPI.defineScript({ "definitions": [
         "class": "HotspotPanoramaOverlayArea",
         "mapColor": "#FF0000",
         "click": "this.mainPlayList.set('selectedIndex', 2)",
-        "toolTip": "Left Hall"
+        "toolTip": "Left Hall",
+        "url": "https://yahoo.com",
         "label": "Left Hall"
        }
       ],
