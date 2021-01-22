@@ -217,8 +217,9 @@ TDV.PlayerAPI.defineScript({ "definitions": [
            "url": "media/panorama_FB0702F2_FC25_AF39_41E0_C824C23BDA65_0_HS_0_0.png",
            "height": 103,
            "class": "ImageResourceLevel",
-           "width": 80
-            "label": "Left Hall"
+           "width": 80,
+           "label": "Left Hall"
+
           }
          ]
         },
