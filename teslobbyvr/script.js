@@ -235,6 +235,7 @@ TDV.PlayerAPI.defineScript({ "definitions": [
         "mapColor": "#FF0000",
         "click": "this.mainPlayList.set('selectedIndex', 2)",
         "toolTip": "Left Hall"
+        "label": "Left Hall"
        }
       ],
       "maps": [
