@@ -96,10 +96,9 @@ https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol=IBM&apikey=demo
 
 				// Link to appropriate DOM
 				tableBodyCellDate.innerHTML = `${report.fiscalDateEnding}`;
-				tableBodyCellAssets.innerHTML = `${report.totalCurrentAssets}`;
-				tableBodyCellLiabilities.innerHTML = `${report.totalCurrentLiabilities}`;
+				tableBodyCellAssets.innerHTML = `${report.totalAssets}`;
+				tableBodyCellLiabilities.innerHTML = `${report.totalLiabilities}`;
 				tableBodyCellShares.innerHTML = `${report.commonStockSharesOutstanding}`;
-				tableBodyCellFairValues.innerHTML = `${report.totalCurrentLiabilities}`;
 
 				// Calculate fair value of a stock
 				var totalAssets = parseInt(`${report.totalAssets}`);
