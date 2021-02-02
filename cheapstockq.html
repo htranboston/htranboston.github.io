@@ -90,12 +90,14 @@ https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol=IBM&apikey=demo
 					tableBodyCellDate = createNode('td'),
 					tableBodyCellAssets = createNode('td');
 					tableBodyCellLiabilities = createNode('td');
+					tableBodyCellShares = createNode('td');
 					tableBodyCellFairValues = createNode('td');
 
 				// Link to appropriate DOM
 				tableBodyCellDate.innerHTML = `${report.fiscalDateEnding}`;
 				tableBodyCellAssets.innerHTML = `${report.totalCurrentAssets}`;
 				tableBodyCellLiabilities.innerHTML = `${report.totalCurrentLiabilities}`;
+				tableBodyCellShares.innerHTML = `${report.commonStockSharesOutstanding}`;
 				tableBodyCellFairValues.innerHTML = `${report.totalCurrentLiabilities}`;
 
 				// Calculate fair value of a stock
@@ -108,6 +110,7 @@ https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol=IBM&apikey=demo
 				append(tableBodyRow, tableBodyCellDate);
 				append(tableBodyRow, tableBodyCellAssets);
 				append(tableBodyRow, tableBodyCellLiabilities);
+				append(tableBodyRow, tableBodyCellShares);
 				append(tableBodyRow, tableBodyCellFairValues);
 				append(tableBody, tableBodyRow);
 			})
