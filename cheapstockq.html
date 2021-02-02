@@ -1,0 +1,121 @@
+<!-- What I learned in this lesson:
+1. Using fake json api for fake data
+2. Load external .json file using fetch().then(function())
+3. Convert HTML collect into array using Array.prototype.slide.call()
+4. Sort array using child element criteria Array.sort(funciton(a, b)) 
+API Key: ZDHN63009CWDMZMM
+https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol=IBM&apikey=demo
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON parse example</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		* {
+			margin: 10px;
+		}
+		h2 {
+			text-align: center;
+		}
+		@media (min-width: 75em) {
+	    	.card-columns {
+	        -webkit-column-count: 5;
+	        -moz-column-count: 5;
+	        column-count: 5;
+	    	}
+		}
+	</style>	
+</head>
+<body>
+<h1>Gross Profit</h1>
+<div class="form-inline">
+  <label for="symbol">Symbol: </label>
+  <input type="text" class="form-control" id="symbol" onchange="updateTicker()">
+  <button type="button" class="btn btn-primary" onclick="loadData()">Submit</button>
+</div>
+<h2 id="ticker">Symbol</h2>
+<table id="container" class="table">
+	<thead>
+		<tr id="table-head-row">
+			<th id="table-header1">Date</th>
+			<th id="table-header2">Total Assets</th>
+			<th id="table-header3">Total Liabilities</th>
+			<th id="table-header4">Fair Value</th>
+		</tr>
+	</thead>
+	<tbody id="table-body">
+	</tbody>
+</table>
+<script type="text/javascript">
+	function updateTicker() {
+		document.getElementById("ticker").innerHTML = document.getElementById('symbol').value.toUpperCase();
+	}
+	function loadData() {
+		let tableBody = document.getElementById('table-body');
+		while (tableBody.firstChild) {
+    		tableBody.removeChild(tableBody.lastChild);
+  		}
+		var stockId = document.getElementById('symbol').value.toUpperCase();
+		const main = document.getElementById('container');
+		var url = "https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol="+stockId+"&apikey=ZDHN63009CWDMZMM";
+		
+		function createNode(element) {
+			let x = document.createElement(element); // Create new element
+			return x;
+		}
+
+		function append(parent, el) {
+			return parent.appendChild(el); // Append child elements to parent
+		}
+
+		fetch(url) // Load fake data from external rest api
+		.then((resp) => resp.json()) // Transform data into json object
+		.then(function(data) {
+			let reports = data.quarterlyReports;
+			return reports.map(function(report) {
+				let tableBodyRow = createNode('tr'),
+					tableBodyCellDate = createNode('td'),
+					tableBodyCellAssets = createNode('td');
+					tableBodyCellLiabilities = createNode('td');
+					tableBodyCellFairValues = createNode('td');
+
+				// Link to appropriate DOM
+				tableBodyCellDate.innerHTML = `${report.fiscalDateEnding}`;
+				tableBodyCellAssets.innerHTML = `${report.totalCurrentAssets}`;
+				tableBodyCellLiabilities.innerHTML = `${report.totalCurrentLiabilities}`;
+				tableBodyCellFairValues.innerHTML = `${report.totalCurrentLiabilities}`;
+
+				// Calculate fair value of a stock
+				var totalAssets = parseInt(`${report.totalAssets}`);
+				var totalLiabilities = parseInt(`${report.totalLiabilities}`);
+				var totalShares = parseInt(`${report.commonStockSharesOutstanding}`)
+				var fairValues = (totalAssets-totalLiabilities)*1.5/totalShares;
+				tableBodyCellFairValues.innerHTML = fairValues;
+
+				append(tableBodyRow, tableBodyCellDate);
+				append(tableBodyRow, tableBodyCellAssets);
+				append(tableBodyRow, tableBodyCellLiabilities);
+				append(tableBodyRow, tableBodyCellFairValues);
+				append(tableBody, tableBodyRow);
+			})
+		})
+		.catch(function (error) {
+			console.log(error);
+		})
+	}
+</script>
+</body>
+</html>
