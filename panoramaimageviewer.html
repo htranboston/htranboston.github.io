@@ -49,6 +49,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		  height: 100%;
 		  position: relative;
 		}
+
+		.tracker {
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			background-color: red;
+			visibility: hidden;
+		}
 	</style>
 </head>
 <body>
@@ -72,8 +80,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	    </h4>
 	</div>
 </div>
+<div class="tracker" id="pano1"></div>
 <script type="text/javascript">
 	var panorama, panorama2, viewer, container, infospot, infospot2;
+	var tracker1, tracker2;
+
+	tracker1 = document.querySelector( "#pano1" );
 
 	container = document.querySelector( '#container' );
 
@@ -82,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	infospot = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
 	infospot.position.set( 1800, 360, -4600); //x,y,z
-	infospot.name = ( "The Story" );
+	infospot.addHoverElement( tracker1, 0 );
 	infospot.addEventListener( 'click', function(){
 	  viewer.setPanorama( panorama2 );
 	} );
