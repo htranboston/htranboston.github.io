@@ -55,7 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			height: 50px;
 			border-radius: 25px;
 			background-color: red;
-			visibility: hidden;
+			pointer-events: none;
 		}
 	</style>
 </head>
@@ -83,16 +83,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="tracker" id="pano1"></div>
 <script type="text/javascript">
 	var panorama, panorama2, viewer, container, infospot, infospot2;
+	var tracker1, tracker2;
 
-	function eventFire(el, etype){
-	if (el.fireEvent) {
-	    el.fireEvent('on' + etype);
-	  } else {
-	    var evObj = document.createEvent('Events');
-	    evObj.initEvent(etype, true, false);
-	    el.dispatchEvent(evObj);
-	  }
-	}
+	tracker1 = document.querySelector( '#pano1' );
 
 	container = document.querySelector( '#container' );
 
@@ -101,11 +94,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	infospot = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
 	infospot.position.set( 1800, 360, -4600); //x,y,z
-	// infospot.addHoverElement( tracker1, 0 );
-	infospot.name = ("img01");
+	infospot.addHoverElement( tracker1, 0 );
 	infospot.addEventListener( 'click', function(){
-		eventFire(document.getElementById('pano1'), 'click');
-	  	viewer.setPanorama( panorama2 );
+		viewer.setPanorama( panorama2 );
 	} );
 
 	panorama.add( infospot );
