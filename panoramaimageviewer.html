@@ -83,18 +83,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="tracker" id="pano1"></div>
 <script type="text/javascript">
 	var panorama, panorama2, viewer, container, infospot, infospot2;
-	var tracker1, tracker2;
+	// var tracker1, tracker2;
 
-	tracker1 = document.querySelector( "#pano1" );
+	// tracker1 = document.querySelector( "#pano1" );
 
 	container = document.querySelector( '#container' );
 
 	panorama = new PANOLENS.ImagePanorama( 'https://pchen66.github.io/Panolens/examples/asset/textures/equirectangular/tunnel.jpg' );
-	panorama2 = new PANOLENS.ImagePanorama( 'https://pchen66.github.io/Panolens/examples/asset/textures/equirectangular/sunset.jpg' );
+	panorama2 = new PANOLENS.ImagePanorama( 'https://pchen66.github.io/Panolens/e"https://images-na.ssl-images-amazon.com/images/I/61mtx+420hL._AC_US436_QL65_.jpg"amples/asset/textures/equirectangular/sunset.jpg' );
 
-	infospot = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
+	infospot = new PANOLENS.Infospot( 500, "https://images-na.ssl-images-amazon.com/images/I/61mtx+420hL._AC_US436_QL65_.jpg" );
 	infospot.position.set( 1800, 360, -4600); //x,y,z
-	infospot.addHoverElement( tracker1, 0 );
+	// infospot.addHoverElement( tracker1, 0 );
 	infospot.addEventListener( 'click', function(){
 	  viewer.setPanorama( panorama2 );
 	} );
