@@ -32,7 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 		.wordCarousel {
 			position: absolute;
-			top: 0;
+			top: 50%;
 			left: 0;
 			bottom: 0;
 			right: 0;
@@ -73,7 +73,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</div>
 </div>
 <script type="text/javascript">
-	var panorama, panorama2, viewer, container, infospot;
+	var panorama, panorama2, viewer, container, infospot, infospot2;
 
 	container = document.querySelector( '#container' );
 
@@ -81,15 +81,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	panorama2 = new PANOLENS.ImagePanorama( 'https://pchen66.github.io/Panolens/examples/asset/textures/equirectangular/sunset.jpg' );
 
 	infospot = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
-	infospot.position.set( -100, 1500, -5000); //x,z,y
-	infospot.addHoverText( "The Story" );
+	infospot.position.set( 1800, 360, -4600); //x,y,z
+	infospot.name = ( "The Story" );
 	infospot.addEventListener( 'click', function(){
 	  viewer.setPanorama( panorama2 );
 	} );
 
 	panorama.add( infospot );
 
-	viewer = new PANOLENS.Viewer( { container: container } );
+	infospot2 = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
+	infospot2.position.set( -100, 1500, -5000); //x,z,y
+	infospot2.name = ( "The Story 2" );
+	infospot2.addEventListener( 'click', function(){
+	  viewer.setPanorama( panorama );
+	} );
+
+	panorama2.add( infospot2 );
+
+	viewer = new PANOLENS.Viewer( { container: container, output: 'console' } );
 	viewer.add( panorama, panorama2 );
 
 	viewer.addUpdateCallback(function(){
