@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meeting Room</title>
+<script src="../js/three.min.js"></script>
+<script src="../js/panolens.min.js"></script>
+<script src="../js/counter.js"></script>
+<link rel="stylesheet" href="../css/counter.css">
+</head>
+<body>
+<script>
+const panorama = new PANOLENS.ImagePanorama( 'images/48705297403_90ac44f13c_o.png' );
+const viewer = new PANOLENS.Viewer();
+viewer.add( panorama );
+</script>
+<div class="container">
+  <h1 id="headline">Countdown to next event</h1>
+  <div id="countdown">
+    <ul>
+      <li><span id="days"></span>Days</li>
+      <li><span id="hours"></span>Hours</li>
+      <li><span id="minutes"></span>Minutes</li>
+      <li><span id="seconds"></span>Seconds</li>
+    </ul>
+  </div>
+  <div class="message">
+    <div id="content">
+      <span class="emoji">
+      	<a href="https://meet.google.com/rym-onbi-dry">Click to join the meeting</a>
+      </span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
