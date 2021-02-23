@@ -4,7 +4,7 @@
         hour = minute * 60,
         day = hour * 24;
 
-  let nextMeeting = "Feb 22, 2021 20:00:00",
+  let nextMeeting = "Feb 24, 2021 09:30:00",
       countDown = new Date(nextMeeting).getTime(),
       x = setInterval(function() {    
 
