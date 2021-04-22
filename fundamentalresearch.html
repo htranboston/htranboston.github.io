@@ -1,0 +1,112 @@
+<!-- What I learned in this lesson:
+1. Using fake json api for fake data
+2. Load external .json file using fetch().then(function())
+3. Convert HTML collect into array using Array.prototype.slide.call()
+4. Sort array using child element criteria Array.sort(funciton(a, b)) 
+API Key: ZDHN63009CWDMZMM
+https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol=IBM&apikey=demo
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fundamental Research</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		* {
+			margin: 5px;
+		}
+		h2 {
+			text-align: center;
+		}
+		@media (min-width: 75em) {
+	    	.card-columns {
+	        -webkit-column-count: 4;
+	        -moz-column-count: 4;
+	        column-count: 4;
+	    	}
+		}
+	</style>	
+</head>
+<body>
+<h1>Fundamental Research</h1>
+<div class="form-inline">
+  <label for="symbol">Symbol: </label>
+  <input type="text" class="form-control" id="symbol" onkeypress="">
+  <button type="button" class="btn btn-primary" onclick="loadData()">Submit</button>
+</div>
+<div id="container" class="card-columns">
+</div>
+<script type="text/javascript">
+	function updateTicker() {
+		document.getElementById('ticker').innerHTML = document.getElementById('symbol').value.toUpperCase();
+	}
+	function loadData() {
+		let ticker = document.getElementById('symbol').value.toUpperCase();
+		const url = "https://www.alphavantage.co/query?function=OVERVIEW&symbol="+ticker+"&apikey=ZDHN63009CWDMZMM";
+		let app = document.getElementById('container');
+
+
+		function createNode(element, cn) {
+			let x = document.createElement(element);
+			x.className = cn;
+			return x;
+		}
+
+		function append(parent, el) {
+			return parent.appendChild(el);
+		}
+
+		fetch(url)
+		.then((resp) => resp.json())
+		.then((data) => {
+			let cardTitle = createNode('h2', ''),
+				cardHeader = createNode('div', 'card-header'),
+				cardBody = createNode('div', 'card-body'),
+				cardBodySector = createNode('p', ''),
+				cardBodyIndustry = createNode('p', ''),
+				cardBodyMarketCap = createNode('p', ''),
+				cardBodyDiv = createNode('p', ''),
+				cardBodyEps = createNode('p', ''),
+				// cardBodyReturnOnEquity = createNode('p', ''),
+				// cardFooter = createNote('div', 'card-footer'),
+				cardMain = createNode('div', 'card');
+
+			//Assign data to DOM elements
+			cardTitle.innerHTML = `${data.Symbol}`;
+			cardBodySector.innerHTML = `Sector: ${data.Sector}`;
+			cardBodyIndustry.innerHTML = `Industry: ${data.Industry}`;
+			cardBodyMarketCap.innerHTML = `Market Capitalization: ${data.MarketCapitalization}`;
+			cardBodyDiv.innerHTML = `Dividend Yield: ${data.DividendYield}`;
+			cardBodyEps.innerHTML = `EPS: ${data.EPS}`;
+
+
+			//Append child elements to app
+			append(cardHeader, cardTitle);
+			append(cardBody, cardBodySector);
+			append(cardBody, cardBodyIndustry);
+			append(cardBody, cardBodyMarketCap);
+			append(cardBody, cardBodyDiv);
+			append(cardBody, cardBodyEps);
+			append(cardMain, cardHeader);
+			append(cardMain, cardBody);
+			append(app, cardMain);
+		})
+		.catch(function(error) {
+			console.log(error);
+		})
+	}
+</script>
+</body>
+</html>
