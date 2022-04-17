@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Timer</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+			font: 20px Arial, sans-serif;
+		}
+	</style>
+</head>
+<body onload="init()">
+<h2>TIMER</h2>
+SET TIMER FOR: <input type="text" id="timeToSet" size="10" style="font: 20px Arial, sans-serif;"></input>
+<button onclick="startTimer()" id="go">GO</button>
+<p id="timer" style="font: 40px Arial, sans-serif;"></p>
+<script type="text/javascript">
+
+	let time = "";
+	let txt = "";
+	let intervalID;
+	let userInput = 0.0;
+
+	function init() {
+		document.getElementById("timeToSet").addEventListener("keyup", function(event) {
+			event.preventDefault();
+			if(event.keyCode === 13) {
+				document.getElementById("go").click();
+			}
+		})
+	}
+
+	function calTime(time) {
+		let timeToSet = 0;
+		timeToSet = time * 3600000;
+		const clock = document.getElementById("timer");
+		clearInterval(intervalID);	
+		intervalID = setInterval(function() {
+			//convert time to miliseconds
+			timeToSet -= 1000;
+			clock.innerHTML = (new Date(timeToSet).toISOString().slice(11,19));
+		}, 1000);
+	}
+
+	function startTimer() {
+		const typTime = ["0.5", "1", "2"];
+		userInput = document.getElementById("timeToSet").value;
+		let timeArray = userInput.split(/([1-9]|0.5)/);
+
+		for (let x in timeArray) {
+			if(typTime.includes(timeArray[x])) {
+				time = timeArray[x];
+			} else {
+				txt = timeArray[x];
+			}
+		}
+		calTime(time);
+	}
+</script>
+</body>
+</html>
