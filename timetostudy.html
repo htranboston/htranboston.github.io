@@ -30,25 +30,25 @@ SET TIMER FOR: <input type="text" id="timeToSet" size="10" style="font: 20px Ari
 		})
 	}
 
-	function playAudio() {
-		const soundTrack = ("lib/barks.mp3");
-		soundTrack.play();
-		soundTrack.loop = true;
+	function playAlarm() {
+		const soundTrack = new Audio("lib/barks.mp3");
+		soundTrack.play();	
 	}
 
 	function calTime(time) {
 		let timeToSet = 0;
 		//convert time to miliseconds
-		timeToSet = time * 360;
+		timeToSet = time * 3600000;
 		const clock = document.getElementById("timer");
 		clearInterval(intervalID);	
 		intervalID = setInterval(function() {
-			if(timeToSet > 0) {
+			if(timeToSet != 0) {
 				timeToSet -= 1000;
 				clock.innerHTML = (new Date(timeToSet).toISOString().slice(11,19));
+			} else if(timeToSet == 0) {
+				playAlarm();
 			}
 		}, 1000);
-		playAudio();
 	}
 
 	function startTimer() {
