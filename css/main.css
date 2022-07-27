@@ -3,6 +3,13 @@ body {
   opacity: 0;
   transition: 1.1s ease-in;
 }
+#bgimg {
+  position: relative;
+  bottom: -200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 .btn {
   font: italic 800 1vw Muli, san-serif;
   color: black;

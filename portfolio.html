@@ -29,7 +29,7 @@
 	    	<a href="#">Exhibit Design</a>
 	  	</div>
 	</div>
-	<div><a class="links" href="journal.html">BLOG</a></div>
+<!-- 	<div><a class="links" href="journal.html">BLOG</a></div> -->
 	<div><a class="links" href="contact.html">CONTACT</a></div>
 </div>
 <div class="container-fluid header">
@@ -48,7 +48,7 @@
   		      <li><a class="links" href="#">Exhibit Design</a></li>
 		    </ul>
 		</div>
-		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div>
+<!-- 		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div> -->
 		<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
 	</div>
 	<div class="row sidemenu">
@@ -274,20 +274,20 @@
 	}
 
 	//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+	var dropdown = document.getElementsByClassName("dropdown-btn");
+	var i;
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
+	for (i = 0; i < dropdown.length; i++) {
+	  dropdown[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var dropdownContent = this.nextElementSibling;
+	    if (dropdownContent.style.display === "block") {
+	      dropdownContent.style.display = "none";
+	    } else {
+	      dropdownContent.style.display = "block";
+	    }
+	  });
+	}
 </script>
 </body>
 </html>
