@@ -36,13 +36,18 @@
 			align-items: center;
 		}
 		a.links {
-			font: italic 800 1.2vw Muli, san-serif;
+			font: italic 800 1vw Muli, san-serif;
 			color: black;
+			padding-left: 10px;
 		}
 		a.links:hover {
 			color: #996633;
 			text-decoration: none;
 			cursor: pointer;
+		}
+		.btn {
+			font: italic 800 1vw Muli, san-serif;
+			color: black;
 		}			
 		.wordCarousel {
 			position: absolute;
@@ -150,25 +155,45 @@
 	    </h4>
 	</div>
 	<div class="sidenav">
-		<div><a class="links active" href="#">HOME</a></div>
+		<div><a class="links" href="index.html">HOME</a></div>
 		<div><a class="links" href="about.html">ABOUT</a></div>
-		<div><a class="links" href="portfolio.html">PORTFOLIO</a></div>
-<!-- 		<div><a class="links" href="journal.html">BLOG</a></div> -->
+		<div class="links">
+			<button class="dropdown-btn">PORTFOLIO
+		    	<i class="fa fa-caret-down"></i>
+		  	</button>
+		  	<div class="dropdown-container">
+		    	<a href="dataviz.html">Data Visualization</a>
+		    	<a href="3dviz.html">3D Visualization</a>
+		    	<a href="exhibitdesign.html">Exhibit Design</a>
+		    	<a href="webdesign.html">Web Design</a>
+		  	</div>
+		</div>
+		<div><a class="links" href="journal.html">BLOG</a></div>
 		<div><a class="links" href="contact.html">CONTACT</a></div>
 	</div>
 	<div class="container-fluid header">
 		<div class="row topmenu">
 			<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
-			<div class="col-sm-1 pt-0" ><a class="links active" href="#">HOME</a></div>
+			<div class="col-sm-1 pt-0" ><a class="links active" href="index.html">HOME</a></div>
 			<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
-			<div class="col-sm-1 pt-0"><a class="links" href="portfolio.html">PORTFOLIO</a></div>
+			<div class="col-sm-2 pt-0 dropdown">
+		    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">PORTFOLIO
+		    <span class="caret"></span>
+			</button>
+			    <ul class="dropdown-menu">
+			      <li><a class="links" href="dataviz.html">Data Visualization</a></li>
+			      <li><a class="links" href="3dviz.html">3D Visualization</a></li>
+			      <li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
+	  		      <li><a class="links" href="webdesign.html">Web Design</a></li>
+			    </ul>
+			</div>
 <!-- 			<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div> -->
 			<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
 		</div>
 		<div class="row sidemenu">
-				<button onclick="opensidemenu()" class="openbt" id="touchOpen"><i class="fa fa-bars"></i></button>
+				<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
 				<img class="logo" src="./images/logo-white.png">
-				<button onclick="closesidemenu()" class="closebt" id="touchClose">
+				<button onclick="closesidemenu()" class="closebt">
 						<i class="fa fa-window-close" aria-hidden="true"></i>
 				</button>
 		</div>

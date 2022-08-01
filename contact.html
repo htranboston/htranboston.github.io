@@ -24,11 +24,16 @@
 		a.links {
 			font: italic 800 1vw Muli, san-serif;
 			color: black;
+			padding-left: 10px;
 		}
 		a.links:hover {
 			color: #996633;
 			text-decoration: none;
 			cursor: pointer;
+		}
+		.btn {
+			font: italic 800 1vw Muli, san-serif;
+			color: black;
 		}
 		.content {
     		position: relative;
@@ -143,18 +148,38 @@
 <div class="sidenav">
 	<div><a class="links" href="index.html">HOME</a></div>
 	<div><a class="links" href="about.html">ABOUT</a></div>
-	<div><a class="links" href="portfolio.html">PORTFOLIO</a></div>
+	<div class="links">
+		<button class="dropdown-btn">PORTFOLIO
+	    	<i class="fa fa-caret-down"></i>
+	  	</button>
+	  	<div class="dropdown-container">
+	    	<a href="dataviz.html">Data Visualization</a>
+	    	<a href="3dviz.html">3D Visualization</a>
+	    	<a href="exhibitdesign.html">Exhibit Design</a>
+	    	<a href="webdesign.html">Web Design</a>
+	  	</div>
+	</div>
 <!-- 	<div><a class="links" href="journal.html">BLOG</a></div> -->
-	<div><a class="links" href="#">CONTACT</a></div>
+	<div><a class="links active" href="contact.html">CONTACT</a></div>
 </div>
 <div class="container-fluid header">
 	<div class="row topmenu">
 		<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
 		<div class="col-sm-1 pt-0" ><a class="links" href="index.html">HOME</a></div>
 		<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
-		<div class="col-sm-1 pt-0"><a class="links" href="portfolio.html">PORTFOLIO</a></div>
+		<div class="col-sm-2 pt-0 dropdown">
+		    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">PORTFOLIO
+		    <span class="caret"></span>
+			</button>
+		    <ul class="dropdown-menu">
+		      <li><a class="links" href="dataviz.html">Data Visualization</a></li>
+		      <li><a class="links" href="3dviz.html">3D Visualization</a></li>
+		      <li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
+  		      <li><a class="links" href="webdesign.html">Web Design</a></li>
+		    </ul>
+		</div>
 <!-- 		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div> -->
-		<div class="col-sm-1 pt-0"><a class="links active" href="#">CONTACT</a></div>
+		<div class="col-sm-1 pt-0"><a class="links active" href="contact.html">CONTACT</a></div>
 	</div>
 	<div class="row sidemenu">
 			<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
@@ -199,7 +224,7 @@
 	<div class="row">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-8">
-			<p style="color: white;">Copyright &copy; 2020 HT Creative Studio</p>     
+			<p style="color: white;">Copyright &copy; 2022 HT Creative Studio</p>     
 		</div>
 		<div class="col-sm-2"></div>
 	</div>
