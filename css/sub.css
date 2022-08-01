@@ -1,0 +1,174 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	position: relative;
+}
+#container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.header {
+	position: absolute;
+}
+.row.topmenu {
+	display: flex;
+	align-items: center;
+}
+a.links {
+	font: italic 800 1vw Muli, san-serif;
+	color: black;
+	padding-left: 10px;
+}
+a.links:hover {
+	color: #996633;
+	text-decoration: none;
+	cursor: pointer;
+}
+.btn {
+	font: italic 800 1vw Muli, san-serif;
+	color: black;
+}			
+.wordCarousel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+a.active {
+	color: gold;
+}
+.row {
+	margin-top: 16px;
+	text-align: center;
+}
+.logo {
+	max-width: 80%;
+	padding-top: 0;
+}
+.sidenav, .row.sidemenu {
+	display: none;
+}
+@media only screen and (max-width: 768px) {
+	.header {
+		position: absolute;
+	}
+	.row.topmenu {
+		display: none;
+	}
+	.row.sidemenu {
+		display: flex;
+		align-items: center;
+	}
+	.row.sidemenu .logo {
+		max-width: 15%;
+		margin: auto;
+	}
+	.sidenav {
+		width: 0;
+		position: fixed;
+		background-color: #eee;
+		height: 100%;
+		z-index: 1;
+		overflow-x: hidden;
+		top: 0;
+		transition: width 0.5s;
+		display: block;
+	}
+	.sidenav .links{
+		display: block;
+		margin-top: 50px;
+		padding-left: 20px;
+		width: 100%;
+		font-size: 18px
+	}
+	.overlaymenu {
+		width: 60%;
+	}
+	.openbt {
+		float: left;
+		margin-left: 30px;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		color: white;
+		font-size: 24px;
+	}
+	.closebt {
+		float: right;
+		margin-right: 30px;
+		transform: translateY(20px);
+		opacity: 0;
+		transition: 0.5s;
+		border: none;
+		outline: none;
+		background-color: transparent;
+	}
+	.activateclosebt {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+	/*padding: 6px 8px 6px 16px;*/
+	font: italic 800 1vw Muli, san-serif;
+	text-decoration: none;
+	font-size: 20px;
+	color: #818181;
+	display: block;
+	border: none;
+	background: none;
+	width:100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+}
+.sidenav .links{
+	display: block;
+	margin-top: 50px;
+	padding-left: 20px;
+	width: 100%;
+	font-size: 18px
+}
+.overlaymenu {
+	width: 60%;
+}
+.openbt {
+	float: left;
+	margin-left: 30px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: white;
+	font-size: 24px;
+}
+.closebt {
+	float: right;
+	margin-right: 30px;
+	transform: translateY(20px);
+	opacity: 0;
+	transition: 0.5s;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+.activateclosebt {
+	transform: translateY(0);
+	opacity: 1;
+}
+#avatar {
+	transform: scale(0.75, 0.75);
+}
+#exhibitHeader {
+	font-size: 5vw;
+}

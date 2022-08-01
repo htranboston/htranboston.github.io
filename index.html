@@ -15,128 +15,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./css/wordcarousel.css">
 	<link rel="stylesheet" type="text/css" href="./css/simpletransition.css">
-	<style type="text/css">
-		html, body {
-		  width: 100%;
-		  height: 100%;
-		  overflow: hidden;
-		  margin: 0;
-		  position: relative;
-		}
-		#container {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-		}
-		.header {
-			position: absolute;
-		}
-		.row.topmenu {
-			display: flex;
-			align-items: center;
-		}
-		a.links {
-			font: italic 800 1vw Muli, san-serif;
-			color: black;
-			padding-left: 10px;
-		}
-		a.links:hover {
-			color: #996633;
-			text-decoration: none;
-			cursor: pointer;
-		}
-		.btn {
-			font: italic 800 1vw Muli, san-serif;
-			color: black;
-		}			
-		.wordCarousel {
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			height: 100%;
-			display: flex;
-			align-items: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-		}
-		a.active {
-			color: gold;
-		}
-		.row {
-			margin-top: 16px;
-			text-align: center;
-		}
-		.logo {
-			max-width: 80%;
-			padding-top: 0;
-		}
-		.sidenav, .row.sidemenu {
-			display: none;
-		}
-		@media only screen and (max-width: 768px) {
-			.header {
-				position: absolute;
-			}
-			.row.topmenu {
-				display: none;
-			}
-			.row.sidemenu {
-				display: flex;
-				align-items: center;
-			}
-			.row.sidemenu .logo {
-				max-width: 15%;
-				margin: auto;
-			}
-			.sidenav {
-				width: 0;
-				position: fixed;
-				background-color: #eee;
-				height: 100%;
-				z-index: 1;
-				overflow-x: hidden;
-				top: 0;
-				transition: width 0.5s;
-				display: block;
-			}
-			.sidenav .links{
-				display: block;
-				margin-top: 50px;
-				padding-left: 20px;
-				width: 100%;
-				font-size: 18px
-			}
-			.overlaymenu {
-				width: 60%;
-			}
-			.openbt {
-				float: left;
-				margin-left: 30px;
-				border: none;
-				outline: none;
-				background-color: transparent;
-				color: white;
-				font-size: 24px;
-			}
-			.closebt {
-				float: right;
-				margin-right: 30px;
-				transform: translateY(20px);
-				opacity: 0;
-				transition: 0.5s;
-				border: none;
-				outline: none;
-				background-color: transparent;
-			}
-			.activateclosebt {
-				transform: translateY(0);
-				opacity: 1;
-			}
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="./css/sub.css">
 </head>
 <body>
 <div id="container">
@@ -155,49 +34,49 @@
 	    </h4>
 	</div>
 	<div class="sidenav">
-		<div><a class="links" href="index.html">HOME</a></div>
-		<div><a class="links" href="about.html">ABOUT</a></div>
-		<div class="links">
-			<button class="dropdown-btn">PORTFOLIO
-		    	<i class="fa fa-caret-down"></i>
-		  	</button>
-		  	<div class="dropdown-container">
-		    	<a href="dataviz.html">Data Visualization</a>
-		    	<a href="3dviz.html">3D Visualization</a>
-		    	<a href="exhibitdesign.html">Exhibit Design</a>
-		    	<a href="webdesign.html">Web Design</a>
-		  	</div>
-		</div>
-		<div><a class="links" href="journal.html">BLOG</a></div>
-		<div><a class="links" href="contact.html">CONTACT</a></div>
+	<div><a class="links active" href="index.html">HOME</a></div>
+	<div><a class="links" href="about.html">ABOUT</a></div>
+	<div class="links">
+		<button class="dropdown-btn">PORTFOLIO
+	    	<i class="fa fa-caret-down"></i>
+	  	</button>
+	  	<div class="dropdown-container">
+	    	<a href="dataviz.html">Data Visualization</a>
+	    	<a href="3dviz.html">3D Visualization</a>
+	    	<a href="exhibitdesign.html">Exhibit Design</a>
+	    	<a href="webdesign.html">Web Design</a>
+	  	</div>
 	</div>
-	<div class="container-fluid header">
-		<div class="row topmenu">
-			<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
-			<div class="col-sm-1 pt-0" ><a class="links active" href="index.html">HOME</a></div>
-			<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
-			<div class="col-sm-2 pt-0 dropdown">
+<!-- 	<div><a class="links" href="journal.html">BLOG</a></div> -->
+	<div><a class="links" href="contact.html">CONTACT</a></div>
+</div>
+<div class="container-fluid header">
+	<div class="row topmenu">
+		<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
+		<div class="col-sm-1 pt-0" ><a class="links active" href="index.html">HOME</a></div>
+		<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
+		<div class="col-sm-2 pt-0 dropdown">
 		    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">PORTFOLIO
 		    <span class="caret"></span>
 			</button>
-			    <ul class="dropdown-menu">
-			      <li><a class="links" href="dataviz.html">Data Visualization</a></li>
-			      <li><a class="links" href="3dviz.html">3D Visualization</a></li>
-			      <li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
-	  		      <li><a class="links" href="webdesign.html">Web Design</a></li>
-			    </ul>
-			</div>
-<!-- 			<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div> -->
-			<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
+		    <ul class="dropdown-menu">
+		      <li><a class="links" href="dataviz.html">Data Visualization</a></li>
+		      <li><a class="links" href="3dviz.html">3D Visualization</a></li>
+		      <li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
+  		      <li><a class="links" href="webdesign.html">Web Design</a></li>
+		    </ul>
 		</div>
-		<div class="row sidemenu">
-				<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
-				<img class="logo" src="./images/logo-white.png">
-				<button onclick="closesidemenu()" class="closebt">
-						<i class="fa fa-window-close" aria-hidden="true"></i>
-				</button>
-		</div>
+<!-- 		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div> -->
+		<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
 	</div>
+	<div class="row sidemenu">
+			<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
+			<img class="logo" src="./images/logo-white.png">
+			<button onclick="closesidemenu()" class="closebt">
+					<i class="fa fa-window-close" aria-hidden="true"></i>
+			</button>
+	</div>
+</div>
 </div>
 <script type="text/javascript">
 	function opensidemenu() {
