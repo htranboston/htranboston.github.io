@@ -1,0 +1,43 @@
+/* ATTENTION, la CSS de lightbox est chargée dans les options (roue crantée) de la CSS */
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-auto-flow: dense;
+}
+.grid-container .item {
+  background:#8FF;
+  display:flex;
+}
+.grid-container .item a {
+  display:flex;
+  width:100%;
+}
+.grid-container .item.portrait {
+  grid-row: auto / span 2;
+}
+.grid-container .item img {
+  width:100%;
+  height:auto;
+  object-fit:cover;
+}
+
+
+/* CSS ne servant qu'à la décoration, inutile pour le fonctionnement */
+
+.filter-buttons {
+  padding:1rem;
+  text-align:center;
+}
+.filter-buttons button {
+  background:#ccc;
+  border:none;
+  font-size:1rem;
+  padding:.5rem 1rem;
+  margin-bottom:.5rem;
+}
+.filter-buttons button:focus {
+  outline:none;
+  background:#eee;
+}

@@ -2354,7 +2354,7 @@
  "shadow": false,
  "borderSize": 0,
  "textShadowColor": "#000000",
- "text": "POWER BY THE EXHIBIT SOURCE",
+ "text": "POWER BY TRAN CREATIVE",
  "fontColor": "#FFFFFF",
  "minWidth": 1,
  "textShadowOpacity": 1,

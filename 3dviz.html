@@ -9,187 +9,214 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="https://www.helha.pub/scripts/patrickkunka-mixitup-61dac05/dist/mixitup.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://www.helha.pub/scripts/lightbox2-2.11.1/dist/js/lightbox.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,400;0,800;1,200;1,400;1,800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/simpletransition.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/gridgallery.css">
+	<link rel="stylesheet" type="text/css" href="css/responsivegridgallery.css">
+	<link rel="stylesheet" type="text/css" href="https://www.helha.pub/scripts/lightbox2-2.11.1/dist/css/lightbox.min.css">
 </head>
 <body>
-<div class="sidenav">
-	<div><a class="links" href="index.html">HOME</a></div>
-	<div><a class="links" href="about.html">ABOUT</a></div>
-	<div class="links">
-		<button class="dropdown-btn">PORTFOLIO
-	    	<i class="fa fa-caret-down"></i>
-	  	</button>
-	  	<div class="dropdown-container">
-	    	<a href="dataviz.html">Data Visualization</a>
-	    	<a href="3dviz.html">3D Visualization</a>
-	    	<a href="exhibitdesign.html">Exhibit Design</a>
-	    	<a href="webdesign.html">Web Design</a>
-	  	</div>
-	</div>
-<!-- 	<div><a class="links" href="journal.html">BLOG</a></div> -->
-	<div><a class="links" href="contact.html">CONTACT</a></div>
-</div>
-<div class="container-fluid header">
-	<div class="row topmenu">
-		<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
-		<div class="col-sm-1 pt-0" ><a class="links" href="index.html">HOME</a></div>
-		<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
-		<div class="col-sm-2 pt-0 dropdown">
-		    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">PORTFOLIO
-		    <span class="caret"></span>
+	<div class="sidenav">
+		<div><a class="links" href="index.html">HOME</a></div>
+		<div><a class="links" href="about.html">ABOUT</a></div>
+		<div class="links">
+			<button class="dropdown-btn">PORTFOLIO
+				<i class="fa fa-caret-down"></i>
 			</button>
-		    <ul class="dropdown-menu">
-		      <li><a class="links" href="dataviz.html">Data Visualization</a></li>
-		      <li><a class="links" href="3dviz.html">3D Visualization</a></li>
-		      <li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
-  		      <li><a class="links" href="webdesign.html">Web Design</a></li>
-		    </ul>
+			<div class="dropdown-container">
+				<a href="dataviz.html">Data Visualization</a>
+				<a href="3dviz.html">3D Visualization</a>
+				<a href="exhibitdesign.html">Exhibit Design</a>
+				<a href="webdesign.html">Web Design</a>
+			</div>
 		</div>
-<!-- 		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div> -->
-		<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
+		<!-- 	<div><a class="links" href="journal.html">BLOG</a></div> -->
+		<div><a class="links" href="contact.html">CONTACT</a></div>
 	</div>
-	<div class="row sidemenu">
+	<div class="container-fluid header">
+		<div class="row topmenu">
+			<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
+			<div class="col-sm-1 pt-0" ><a class="links" href="index.html">HOME</a></div>
+			<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
+			<div class="col-sm-2 pt-0 dropdown">
+				<button class="btn dropdown-toggle" type="button" data-toggle="dropdown">PORTFOLIO
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="links" href="dataviz.html">Data Visualization</a></li>
+					<li><a class="links" href="3dviz.html">3D Visualization</a></li>
+					<li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
+					<li><a class="links" href="webdesign.html">Web Design</a></li>
+				</ul>
+			</div>
+			<!-- 		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div> -->
+			<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
+		</div>
+		<div class="row sidemenu">
 			<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
 			<img class="logo" src="./images/logo-white.png">
 			<button onclick="closesidemenu()" class="closebt">
-					<i class="fa fa-window-close" aria-hidden="true"></i>
+				<i class="fa fa-window-close" aria-hidden="true"></i>
 			</button>
+		</div>
 	</div>
-</div>
-<div class="container-fluid body">
-	<div class="row">
-		<div class="col-sm-12">
-			<h2 id="exhibitHeader">
-				<span class="fa-stack">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<strong class="fa-stack-1x" style="color: white; padding-left: 1px; ">2</strong>
-				</span>
-				3D VISUALIZATION
-			</h2>
-			<br>
-		<div id="gallery">
-		  <div><img src="portfolio/3dviz/1.png"/><a href="#lightbox-1">Fuji Beauty Spa</a></div>
-		  <div><img src="portfolio/3dviz/3.jpg"/><a href="#lightbox-2">Saki Grill & Bar</a></div>
-		  <div><img src="portfolio/3dviz/2.jpg"/><a href="#lightbox-3">Soho Nails Lounge</a></div>
-		  <div><img src="portfolio/3dviz/4.jpg"/><a href="#lightbox-4">Time Nails</a></div>
-		  <div><img src="portfolio/3dviz/5.jpg"/><a href="#lightbox-5">Beautyland by Hannah</a></div>
-		  <div><img src="portfolio/3dviz/6.jpg"/><a href="#lightbox-6">Kung Fu Tea</a></div>
-		  <div><img src="portfolio/3dviz/10.jpg"/><a href="#lightbox-7">Pinky Nails</a></div>
-		  <div><img src="portfolio/3dviz/8.jpg"/><a href="#lightbox-8">Gongcha Tea</a></div>
-		  <div><img src="portfolio/3dviz/9.jpg"/><a href="#lightbox-9">North West Beauty</a></div>
-		  <div><img src="portfolio/3dviz/7.jpg"/><a href="#lightbox-10">Golden Nail</a></div>
-		  <div><img src="portfolio/3dviz/11.jpg"/><a href="#lightbox-11">Saigon Bistro</a></div>
-		  <div><img src="portfolio/3dviz/12.jpg"/><a href="#lightbox-12">Moose Nails Spa</a></div>
-		  <div><img src="portfolio/3dviz/13.jpg"/><a href="#lightbox-13">Boston Best Salon</a></div>
-		  <div><img src="portfolio/3dviz/14.jpg"/><a href="#lightbox-14">Fomosa Beauty Salon</a></div>
-		  <div><img src="portfolio/3dviz/15.jpg"/><a href="#lightbox-15">Winter Wonderland</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=527"/><a href="#lightbox-16">527</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=528"/><a href="#lightbox-17">528</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=529"/><a href="#lightbox-18">529</a></div>
-		</div>
-		<div class="lightbox" id="lightbox-1">
-		  <div class="content"><img src="portfolio/3dviz/1.png">
-		    <div class="title"><b>Fuji Beauty Spa</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-2">
-		  <div class="content"><img src="portfolio/3dviz/3.jpg"/>
-		    <div class="title"><b>Saki Grill & Bar</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-3">
-		  <div class="content"><img src="portfolio/3dviz/2.jpg"/>
-		    <div class="title"><b>Soho Nails Lounge</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-4">
-		  <div class="content"><img src="portfolio/3dviz/4.jpg"/>
-		    <div class="title"><b>Time Nails</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-5">
-		  <div class="content"><img src="portfolio/3dviz/5.jpg"/>
-		    <div class="title"><b>Beautyland by Hannah</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-6">
-		  <div class="content"><img src="portfolio/3dviz/6.jpg"/>
-		    <div class="title"><b>Kung Fu Tea</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-7">
-		  <div class="content"><img src="portfolio/3dviz/10.jpg"/>
-		  	<div class="title"><b>Pinky Nails</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-8">
-		  <div class="content"><img src="portfolio/3dviz/8.jpg"/>
-		    <div class="title"><b>Gongcha Tea</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-9">
-		  <div class="content"><img src="portfolio/3dviz/9.jpg"/>
-		    <div class="title"><b>North West Beauty</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-10">
-		  <div class="content"><img src="portfolio/3dviz/7.jpg"/>
-		    <div class="title"><b>Golden Nail</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-11">
-		  <div class="content"><img src="portfolio/3dviz/11.jpg"/>
-		    <div class="title"><b>Saigon Bistro</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-12">
-		  <div class="content"><img src="portfolio/3dviz/12.jpg"/>
-		    <div class="title"><b>Moose Nails Spa</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-13">
-		  <div class="content"><img src="portfolio/3dviz/13.jpg"/>
-		    <div class="title"><b>Boston Best Salon</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-14">
-		  <div class="content"><img src="portfolio/3dviz/14.jpg"/>
-		    <div class="title"><b>Fomosa Beauty Salon</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-15">
-		  <div class="content"><img src="portfolio/3dviz/15.jpg"/>
-		    <div class="title"><b>Winter Wonderland</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-16">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=527"/>
-		    <div class="title">No. <b>527</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-17">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=528"/>
-		    <div class="title">No. <b>528</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-18">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=529"/>
-		    <div class="title">No. <b>529</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
+	<div class="container-fluid body">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 id="exhibitHeader">
+					<span class="fa-stack">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<strong class="fa-stack-1x" style="color: white; padding-left: 1px; ">2</strong>
+					</span>
+					3D VISUALIZATION
+				</h2>
+				<br>
+			</div>
+			<!-- ATTENTION, all thumbnails must measure 480px by 300px, horizontally or vertically! The size of large images does not matter, but exceeding 1800px is useless and will weigh down your site -->
+			<div class="filter-buttons col-sm-12">
+				<button type="button" data-filter="all">All</button>
+				<button type="button" data-filter=".nailsalon">Nail Salon</button>
+				<button type="button" data-filter=".restaurant">Restaurant</button>
+				<button type="button" data-filter=".exterior">Exterior</button>
+				<button type="button" data-filter=".vr">Virtual Reality</button>
+			</div>
+			<div class="grid-container filter-container col-sm-12">
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/1.png" data-lightbox="lightbox" data-title="Fuji Beauty Spa">
+						<img src="portfolio/3dviz/1.png">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/2.jpg" data-lightbox="lightbox" data-title="Soho Nail Lounge">
+						<img src="portfolio/3dviz/2.jpg">
+					</a>
+				</div>
+				<div class="item portrait mix restaurant">
+					<a href="portfolio/3dviz/3.jpg" data-lightbox="lightbox" data-title="Saki Grill Bar">
+						<img src="portfolio/3dviz/3.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/4.jpg" data-lightbox="lightbox" data-title="Time Nails">
+						<img src="portfolio/3dviz/4.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/5.jpg" data-lightbox="lightbox" data-title="Beautyland by Hannah">
+						<img src="portfolio/3dviz/5.jpg">
+					</a>
+				</div>
+				<div class="item portrait mix restaurant">
+					<a href="portfolio/3dviz/6.jpg" data-lightbox="lightbox" data-title="Kungfu Tea">
+						<img src="portfolio/3dviz/6.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/7.jpg" data-lightbox="lightbox" data-title="Golden Nail">
+						<img src="portfolio/3dviz/7.jpg">
+					</a>
+				</div>
+				<div class="item portrait mix restaurant">
+					<a href="portfolio/3dviz/8.jpg" data-lightbox="lightbox" data-title="Gongcha Tea">
+						<img src="portfolio/3dviz/8.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/9.jpg" data-lightbox="lightbox" data-title="North West Beauty">
+						<img src="portfolio/3dviz/9.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/10.jpg" data-lightbox="lightbox" data-title="Winter Wonderland Spa">
+						<img src="portfolio/3dviz/10.jpg">
+					</a>
+				</div>
+				<div class="item mix restaurant">
+					<a href="portfolio/3dviz/11.jpg" data-lightbox="lightbox" data-title="Saigon Bistro">
+						<img src="portfolio/3dviz/11.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/12.jpg" data-lightbox="lightbox" data-title="Moose Nails Spa">
+						<img src="portfolio/3dviz/12.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/13.jpg" data-lightbox="lightbox" data-title="Boston Best Salon">
+						<img src="portfolio/3dviz/13.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/14.jpg" data-lightbox="lightbox" data-title="Fomosa Beauty Salon">
+						<img src="portfolio/3dviz/14.jpg">
+					</a>
+				</div>
+				<div class="item portrait mix nailsalon">
+					<a href="portfolio/3dviz/15.jpg" data-lightbox="lightbox" data-title="Pinky Nails">
+						<img src="portfolio/3dviz/15.jpg">
+					</a>
+				</div>
+				<div class="item portrait mix vr">
+					<a href="portfolio/3dviz/16.jpg" data-lightbox="lightbox" data-title="Intercontinental Source">
+						<img src="portfolio/3dviz/16.jpg">
+					</a>
+					<button onclick="window.open('https://htranboston.github.io/demo01/', '_blank')">
+			      		View Demo
+				    </button>
+				</div>
+				<div class="item mix vr">
+					<a href="portfolio/3dviz/17.jpg" data-lightbox="lightbox" data-title="TES Interactive">
+						<img src="portfolio/3dviz/17.jpg">
+					</a>
+					<button onclick="window.open('https://htranboston.github.io/interactive/', '_blank')">
+			      		View Demo
+				    </button>
+				</div>
+				<div class="item portrait mix vr">
+					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
+						<img src="https://via.placeholder.com/330x480/779977/ffffff?text=vr">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
+						<img src="https://via.placeholder.com/480x330/999977/ffffff?text=nailsalon">
+					</a>
+				</div>
+				<div class="item portrait mix restaurant">
+					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
+						<img src="https://via.placeholder.com/330x480/779999/ffffff?text=restaurant">
+					</a>
+				</div>
+				<div class="item mix vr">
+					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
+						<img src="https://via.placeholder.com/480x330/779977/ffffff?text=vr">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
+						<img src="https://via.placeholder.com/480x330/999977/ffffff?text=nailsalon">
+					</a>
+				</div>
+				<div class="item portrait mix restaurant">
+					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
+						<img src="https://via.placeholder.com/330x480/779999/ffffff?text=restaurant">
+					</a>
+				</div>
+			</div>
 		</div>
 		<div class="page-nav">
 			<ul class="pagination">
-			  <li class="page-item"><a class="page-link" href="dataviz.html">Data Visualization</a></li>
-			  <li class="page-item"><a class="page-link active" href="3dviz.html">3D Visualization</a></li>
-			  <li class="page-item"><a class="page-link" href="exhibitdesign.html">Exhibit Design</a></li>
-			  <li class="page-item"><a class="page-link" href="webdesign.html">Web Design</a></li>
+				<li class="page-item"><a class="page-link" href="dataviz.html">Data Visualization</a></li>
+				<li class="page-item"><a class="page-link active" href="3dviz.html">3D Visualization</a></li>
+				<li class="page-item"><a class="page-link" href="exhibitdesign.html">Exhibit Design</a></li>
+				<li class="page-item"><a class="page-link" href="webdesign.html">Web Design</a></li>
 			</ul>
 		</div>
 	</div>
-</div>
 <div class="container-fluid footer">
 	<div class="row">
 		<div class="col-sm-2"></div>
@@ -201,10 +228,10 @@
 </div>
 <script type="text/javascript">
 	window.onload = function() {
-		 var player = document.getElementsByClassName("body")[0];
-		 player.className += " animate_content";
-		 document.body.style.backgroundColor = "gray";
-		 document.body.style.opacity = 1;
+		var player = document.getElementsByClassName("body")[0];
+		player.className += " animate_content";
+		document.body.style.backgroundColor = "gray";
+		document.body.style.opacity = 1;
 	}
 	var el = document.getElementsByClassName("el");
 	for(let i=0; i<el.length; i++) {
@@ -229,23 +256,23 @@
 	var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
 
 	setTimeout(function() {
-	  $cont.classList.remove('s--inactive');
+		$cont.classList.remove('s--inactive');
 	}, 200);
 
 	$elsArr.forEach(function($el) {
-	  $el.addEventListener('click', function() {
-	    if (this.classList.contains('s--active')) return;
-	    $cont.classList.add('s--el-active');
-	    this.classList.add('s--active');
-	  });
+		$el.addEventListener('click', function() {
+			if (this.classList.contains('s--active')) return;
+			$cont.classList.add('s--el-active');
+			this.classList.add('s--active');
+		});
 	});
 
 	$closeBtnsArr.forEach(function($btn) {
-	  $btn.addEventListener('click', function(e) {
-	    e.stopPropagation();
-	    $cont.classList.remove('s--el-active');
-	    document.querySelector('.el.s--active').classList.remove('s--active');
-	  });
+		$btn.addEventListener('click', function(e) {
+			e.stopPropagation();
+			$cont.classList.remove('s--el-active');
+			document.querySelector('.el.s--active').classList.remove('s--active');
+		});
 	})
 
 	// Play portfolio slides
@@ -254,38 +281,41 @@
 
 	// Next/previous controls
 	function plusSlides(n) {
-	  showSlides(slideIndex += n);
+		showSlides(slideIndex += n);
 	}
 
 	function showSlides(n) {
-	  let i;
-	  let activeSlide = document.getElementsByClassName("el s--active");
-	  let _el__overflow = activeSlide[0].firstElementChild;
-	  let _el__inner = _el__overflow.children;
-	  let _el__bg = _el__inner[0].firstElementChild;
-	  if (n > 3) {slideIndex = 1}
-	  if (n < 1) {slideIndex = 3}
-	  for (i = 1; i < 4; i++) {
-	    _el__bg.classList.remove("slide"+i);
-	  }
-	  _el__bg.classList.add("slide"+slideIndex);
-	}
+		let i;
+		let activeSlide = document.getElementsByClassName("el s--active");
+		let _el__overflow = activeSlide[0].firstElementChild;
+		let _el__inner = _el__overflow.children;
+		let _el__bg = _el__inner[0].firstElementChild;
+		if (n > 3) {slideIndex = 1}
+			if (n < 1) {slideIndex = 3}
+				for (i = 1; i < 4; i++) {
+					_el__bg.classList.remove("slide"+i);
+				}
+				_el__bg.classList.add("slide"+slideIndex);
+			}
 
 	//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 	var dropdown = document.getElementsByClassName("dropdown-btn");
 	var i;
 
 	for (i = 0; i < dropdown.length; i++) {
-	  dropdown[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var dropdownContent = this.nextElementSibling;
-	    if (dropdownContent.style.display === "block") {
-	      dropdownContent.style.display = "none";
-	    } else {
-	      dropdownContent.style.display = "block";
-	    }
-	  });
+		dropdown[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropdownContent = this.nextElementSibling;
+			if (dropdownContent.style.display === "block") {
+				dropdownContent.style.display = "none";
+			} else {
+				dropdownContent.style.display = "block";
+			}
+		});
 	}
+
+	/* ATTENTION, les scripts jQuery, MixItUp et lightbox sont chargés dans les options (roue crantée) JS */
+	var mixer = mixitup('.filter-container');
 </script>
 </body>
 </html>
