@@ -16,12 +16,17 @@
 	<link rel="stylesheet" type="text/css" href="./css/wordcarousel.css">
 	<link rel="stylesheet" type="text/css" href="./css/simpletransition.css">
 	<link rel="stylesheet" type="text/css" href="./css/sub.css">
+	<style type="text/css">
+		.wordCarousel {
+			pointer-events: none;
+		}
+	</style>
 </head>
 <body>
 <div id="container">
 	<div class="content" id="content">
 		<h4 class="wordCarousel">    
-	        <span>Hi, My name is Huy Tran. I'm </span>  
+	        <span style="color: black; background-color: white; opacity: 75%; margin-left: 5vw; padding-right: 5vw;">Hi, My name is Huy Tran. I'm </span>  
 	        <div> 
 	        <!-- Use classes 2,3, or 4 to match the number of words --> 
 	            <ul class="flip5"> 
@@ -118,12 +123,16 @@
 
 	container = document.querySelector( '#container' );
 
-	panorama = new PANOLENS.ImagePanorama( 'https://htranboston.github.io/images/livingroom.jpg' );
-	panorama2 = new PANOLENS.ImagePanorama( 'https://pchen66.github.io/Panolens/examples/asset/textures/equirectangular/sunset.jpg' );
+	panorama = new PANOLENS.ImagePanorama( 'images/goldenpalace.jpg' );
+	panorama.addEventListener("click", function(e){
+	  if (e.intersects.length > 0) return;
+	  const a = viewer.raycaster.intersectObject(viewer.panorama, true)[0].point;
+	  console.log('click panorama\n', e, 'point\n', a);
+	});
 
 	//Link to soccerbetbuddy
 	infospot1 = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
-	infospot1.position.set( 2800, -500, -5000); //x,z,y
+	infospot1.position.set( 2800, -500, -5000); //x,y,z
 	// var soccerLink = document.createElement('P');
 	// var soccerLinkAtt = document.createAttribute("src");
 	// soccerLinkAtt.value = "https://soccerbetbuddy.com";
@@ -138,7 +147,7 @@
 
 	//Link to projects
 	infospot2 = new PANOLENS.Infospot( 500, PANOLENS.DataImage.Info );
-	infospot2.position.set( -2800, 1500, -5000); //x,z,y
+	infospot2.position.set( 1426, -1800, -4436); //x,y,z
 	infospot2.addHoverText( "Projects" );
 	infospot2.addEventListener( 'click', function(){
 	  // viewer.setPanorama( panorama2 );
