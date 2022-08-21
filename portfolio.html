@@ -9,219 +9,251 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="https://www.helha.pub/scripts/patrickkunka-mixitup-61dac05/dist/mixitup.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://www.helha.pub/scripts/lightbox2-2.11.1/dist/js/lightbox.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,400;0,800;1,200;1,400;1,800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/simpletransition.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/gridgallery.css">
+	<link rel="stylesheet" type="text/css" href="css/responsivegridgallery.css">
+	<link rel="stylesheet" type="text/css" href="https://www.helha.pub/scripts/lightbox2-2.11.1/dist/css/lightbox.min.css">
 </head>
 <body>
-<div class="sidenav">
-	<div><a class="links" href="index.html">HOME</a></div>
-	<div><a class="links" href="about.html">ABOUT</a></div>
-	<div class="links active">
-		<button class="dropdown-btn">PORTFOLIO
-	    	<i class="fa fa-caret-down"></i>
-	  	</button>
-	  	<div class="dropdown-container">
-	    	<a href="dataviz.html">Data Visualization</a>
-	    	<a href="3dviz.html">3D Visualization</a>
-	    	<a href="exhibitdesign.html">Exhibit Design</a>
-	    	<a href="webdesign.html">Web Design</a>
-	  	</div>
-	</div>
-	<div><a class="links" href="journal.html">BLOG</a></div>
-	<div><a class="links" href="contact.html">CONTACT</a></div>
-</div>
-<div class="container-fluid header">
-	<div class="row topmenu">
-		<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
-		<div class="col-sm-1 pt-0" ><a class="links" href="index.html">HOME</a></div>
-		<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
-		<div class="col-sm-2 pt-0 dropdown">
-		    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">PORTFOLIO
-		    <span class="caret"></span>
+	<div class="sidenav">
+		<div><a class="links" href="index.html">HOME</a></div>
+		<div><a class="links" href="about.html">ABOUT</a></div>
+		<div class="links">
+			<button class="dropdown-btn">PORTFOLIO
+				<i class="fa fa-caret-down"></i>
 			</button>
-		    <ul class="dropdown-menu">
-		      <li><a class="links" href="dataviz.html">Data Visualization</a></li>
-		      <li><a class="links" href="3dviz.html">3D Visualization</a></li>
-		      <li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
-  		      <li><a class="links" href="webdesign.html">Web Design</a></li>
-		    </ul>
+			<div class="dropdown-container">
+				<a href="dataviz.html" class="active">Data Visualization</a>
+				<a href="3dviz.html">3D Visualization</a>
+				<a href="exhibitdesign.html">Exhibit Design</a>
+				<a href="webdesign.html">Web Design</a>
+			</div>
 		</div>
-		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div>
-		<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
+		<!-- 	<div><a class="links" href="journal.html">BLOG</a></div> -->
+		<div><a class="links" href="contact.html">CONTACT</a></div>
 	</div>
-	<div class="row sidemenu">
+	<div class="container-fluid header">
+		<div class="row topmenu">
+			<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
+			<div class="col-sm-1 pt-0" ><a class="links" href="index.html">HOME</a></div>
+			<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
+			<div class="col-sm-2 pt-0 dropdown">
+				<button class="btn dropdown-toggle" type="button" data-toggle="dropdown">PORTFOLIO
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="links active" href="dataviz.html">Data Visualization</a></li>
+					<li><a class="links" href="3dviz.html">3D Visualization</a></li>
+					<li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
+					<li><a class="links" href="webdesign.html">Web Design</a></li>
+				</ul>
+			</div>
+			<!-- 		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div> -->
+			<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
+		</div>
+		<div class="row sidemenu">
 			<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
 			<img class="logo" src="./images/logo-white.png">
 			<button onclick="closesidemenu()" class="closebt">
-					<i class="fa fa-window-close" aria-hidden="true"></i>
+				<i class="fa fa-window-close" aria-hidden="true"></i>
 			</button>
+		</div>
 	</div>
-</div>
-<div class="container-fluid body">
-	<div class="row">
-		<div class="col-sm-12">
-			<h2 id="exhibitHeader">
-				<span class="fa-stack">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<strong class="fa-stack-1x" style="color: white; padding-left: 1px; ">1</strong>
-				</span>
-				DATA VISUALIZATION
-			</h2>
-			<br>
-		<div id="gallery">
-		  <div><img src="portfolio/dataviz/project1/01.png"/><a href="#lightbox-1">C02 Emissions</a></div>
-		  <div><img src="portfolio/dataviz/project3/value_investing_2022.jpg"/><a href="#lightbox-2">Value Investing 2022</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=514"/><a href="#lightbox-3">514</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=515"/><a href="#lightbox-4">515</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=516"/><a href="#lightbox-5">516</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=517"/><a href="#lightbox-6">517</a></div>
-		  <div><img src="portfolio/dataviz/project2/gas_price_by_country_2022.png"/><a href="#lightbox-7">Gas Price By Country 2022</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=519"/><a href="#lightbox-8">519</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=520"/><a href="#lightbox-9">520</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=521"/><a href="#lightbox-10">521</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=522"/><a href="#lightbox-11">522</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=523"/><a href="#lightbox-12">523</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=524"/><a href="#lightbox-13">524</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=525"/><a href="#lightbox-14">525</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=526"/><a href="#lightbox-15">526</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=527"/><a href="#lightbox-16">527</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=528"/><a href="#lightbox-17">528</a></div>
-		  <div><img src="https://picsum.photos/600/600/?image=529"/><a href="#lightbox-18">529</a></div>
-		</div>
-		<div class="lightbox" id="lightbox-1">
-		  <div class="content"><a href="https://public.tableau.com/views/CO2EmissionsPerCapita_16557296841180/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank"><img src="portfolio/dataviz/project1/01.png"></a>
-		    <div class="title"><b>C02 Emissions</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-2">
-		  <div class="content"><a href="https://public.tableau.com/views/ValueInvestingPortfolio2022/StocksBoard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank"><img src="portfolio/dataviz/project3/value_investing_2022.jpg"/></a>
-		    <div class="title"><b>Value Investing 2022</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-3">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=514"/>
-		    <div class="title">No. <b>514</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-4">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=515"/>
-		    <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-5">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=516"/>
-		    <div class="title">No. <b>516</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-6">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=517"/>
-		    <div class="title">No. <b>517</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-7">
-		  <div class="content"><a href="https://public.tableau.com/views/GasPriceByCountry2022/GasPriceByCountry2022?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank"><img src="portfolio/dataviz/project2/gas_price_by_country_2022.png"/></a>
-		    <div class="title"><b>Gas Price By Country 2022</b></div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-8">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=519"/>
-		    <div class="title">No. <b>519</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-9">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=520"/>
-		    <div class="title">No. <b>520</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-10">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=521"/>
-		    <div class="title">No. <b>521</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-11">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=522"/>
-		    <div class="title">No. <b>522</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-12">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=523"/>
-		    <div class="title">No. <b>523</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-13">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=524"/>
-		    <div class="title">No. <b>524</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-14">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=525"/>
-		    <div class="title">No. <b>525</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-15">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=526"/>
-		    <div class="title">No. <b>526</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-16">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=527"/>
-		    <div class="title">No. <b>527</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-17">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=528"/>
-		    <div class="title">No. <b>528</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
-		</div>
-		<div class="lightbox" id="lightbox-18">
-		  <div class="content"><img src="https://picsum.photos/1920/1080/?image=529"/>
-		    <div class="title">No. <b>529</b> from Picsum</div><a class="close" href="#gallery"></a>
-		  </div>
+	<div class="container-fluid body">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 id="exhibitHeader">
+					<span class="fa-stack">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<strong class="fa-stack-1x" style="color: white; padding-left: 1px; ">1</strong>
+					</span>
+					DATA VISUALIZATION
+				</h2>
+				<br>
+			</div>
+			<!-- ATTENTION, all thumbnails must measure 480px by 300px, horizontally or vertically! The size of large images does not matter, but exceeding 1800px is useless and will weigh down your site -->
+			<div class="filter-buttons col-sm-12">
+				<button type="button" data-filter="all">All</button>
+				<button type="button" data-filter=".tableau">Tableau</button>
+				<button type="button" data-filter=".powerbi">Power BI</button>
+				<button type="button" data-filter=".sql">SQL</button>
+				<button type="button" data-filter=".r">R</button>
+				<button type="button" data-filter=".d3">D3.js</button>
+			</div>
+			<div class="grid-container filter-container col-sm-12">
+				<div class="item mix tableau">
+					<a href="portfolio/dataviz/01.png" data-lightbox="lightbox" data-title="C02 Emissions">
+						<img src="portfolio/dataviz/01.png">
+					</a>
+					<button class="demo" onclick="window.open('https://public.tableau.com/views/CO2EmissionsPerCapita_16557296841180/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link', '_blank')">
+						View Sample
+					</button>
+				</div>
+				<div class="item mix tableau">
+					<a href="portfolio/dataviz/02.png" data-lightbox="lightbox" data-title="Gas Price by Country 2022">
+						<img src="portfolio/dataviz/02.png">
+					</a>
+					<button class="demo" onclick="window.open('https://public.tableau.com/views/GasPriceByCountry2022/GasPriceByCountry2022?:language=en-US&:display_count=n&:origin=viz_share_link', '_blank')">
+						View Sample
+					</button>
+				</div>
+				<div class="item portrait mix tableau">
+					<a href="portfolio/dataviz/03.jpg" data-lightbox="lightbox" data-title="Value Investing Portfolio 2022">
+						<img src="portfolio/dataviz/03.jpg">
+					</a>
+					<button class="demo" onclick="window.open('https://public.tableau.com/views/ValueInvestingPortfolio2022/StocksBoard?:language=en-US&:display_count=n&:origin=viz_share_link', '_blank')">
+						View Sample
+					</button>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/4.jpg" data-lightbox="lightbox" data-title="Time Nails">
+						<img src="portfolio/3dviz/4.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/5.jpg" data-lightbox="lightbox" data-title="Beautyland by Hannah">
+						<img src="portfolio/3dviz/5.jpg">
+					</a>
+				</div>
+				<div class="item portrait mix restaurant">
+					<a href="portfolio/3dviz/6.jpg" data-lightbox="lightbox" data-title="Kungfu Tea">
+						<img src="portfolio/3dviz/6.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/7.jpg" data-lightbox="lightbox" data-title="Golden Nail">
+						<img src="portfolio/3dviz/7.jpg">
+					</a>
+				</div>
+				<div class="item portrait mix restaurant">
+					<a href="portfolio/3dviz/8.jpg" data-lightbox="lightbox" data-title="Gongcha Tea">
+						<img src="portfolio/3dviz/8.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/9.jpg" data-lightbox="lightbox" data-title="North West Beauty">
+						<img src="portfolio/3dviz/9.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/10.jpg" data-lightbox="lightbox" data-title="Winter Wonderland Spa">
+						<img src="portfolio/3dviz/10.jpg">
+					</a>
+				</div>
+				<div class="item mix restaurant">
+					<a href="portfolio/3dviz/11.jpg" data-lightbox="lightbox" data-title="Saigon Bistro">
+						<img src="portfolio/3dviz/11.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/12.jpg" data-lightbox="lightbox" data-title="Moose Nails Spa">
+						<img src="portfolio/3dviz/12.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/13.jpg" data-lightbox="lightbox" data-title="Boston Best Salon">
+						<img src="portfolio/3dviz/13.jpg">
+					</a>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/14.jpg" data-lightbox="lightbox" data-title="Fomosa Beauty Salon">
+						<img src="portfolio/3dviz/14.jpg">
+					</a>
+				</div>
+				<div class="item portrait mix nailsalon">
+					<a href="portfolio/3dviz/15.jpg" data-lightbox="lightbox" data-title="Pinky Nails">
+						<img src="portfolio/3dviz/15.jpg">
+					</a>
+				</div>
+				<div class="item portrait mix vr">
+					<a href="portfolio/3dviz/16.jpg" data-lightbox="lightbox" data-title="Intercontinental Source">
+						<img src="portfolio/3dviz/16.jpg">
+					</a>
+					<button class="demo" onclick="window.open('https://htranboston.github.io/demo01/', '_blank')">
+						View Demo
+					</button>
+				</div>
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/18.jpg" data-lightbox="lightbox" data-title="Golden Palace Salon">
+						<img src="portfolio/3dviz/18.jpg">
+					</a>
+				</div>
+				<div class="item portrait mix vr">
+					<a href="portfolio/3dviz/17.jpg" data-lightbox="lightbox" data-title="TES Interactive">
+						<img src="portfolio/3dviz/17.jpg">
+					</a>
+					<button class="demo" onclick="window.open('https://htranboston.github.io/interactive/', '_blank')">
+						View Demo
+					</button>
+				</div>
+				<!-- <div class="item mix nailsalon">
+					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
+						<img src="https://via.placeholder.com/480x330/999977/ffffff?text=nailsalon">
+					</a>
+				</div>
+				<div class="item mix restaurant">
+					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
+						<img src="https://via.placeholder.com/330x480/779999/ffffff?text=restaurant">
+					</a>
+				</div>
+				<div class="item mix vr">
+					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
+						<img src="https://via.placeholder.com/480x330/779977/ffffff?text=vr">
+					</a>
+				</div> -->
+				<div class="item mix nailsalon">
+					<a href="portfolio/3dviz/18.jpg" data-lightbox="lightbox" data-title="Golden Palace Salon">
+						<img src="portfolio/3dviz/18.jpg">
+					</a>
+				</div>
+			</div>
 		</div>
 		<div class="page-nav">
 			<ul class="pagination">
-			  <li class="page-item"><a class="page-link active" href="dataviz.html">Data Visualization</a></li>
-			  <li class="page-item"><a class="page-link" href="3dviz.html">3D Visualization</a></li>
-			  <li class="page-item"><a class="page-link" href="exhibitdesign.html">Exhibit Design</a></li>
-			  <li class="page-item"><a class="page-link" href="webdesign.html">Web Design</a></li>
+				<li class="page-item"><a class="page-link active" href="dataviz.html">Data Visualization</a></li>
+				<li class="page-item"><a class="page-link" href="3dviz.html">3D Visualization</a></li>
+				<li class="page-item"><a class="page-link" href="exhibitdesign.html">Exhibit Design</a></li>
+				<li class="page-item"><a class="page-link" href="webdesign.html">Web Design</a></li>
 			</ul>
 		</div>
 	</div>
-</div>
-<div class="container-fluid footer">
-	<div class="row">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-8">
-			<p style="color: white; margin-top: 100px;">Copyright &copy; 2022 HT Creative Studio</p>     
+	<div class="container-fluid footer">
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<p style="color: white; margin-top: 100px;">Copyright &copy; 2022 HT Creative Studio</p>     
+			</div>
+			<div class="col-sm-2"></div>
 		</div>
-		<div class="col-sm-2"></div>
 	</div>
-</div>
-<script type="text/javascript">
-	window.onload = function() {
-		 var player = document.getElementsByClassName("body")[0];
-		 player.className += " animate_content";
-		 document.body.style.backgroundColor = "gray";
-		 document.body.style.opacity = 1;
-	}
-	var el = document.getElementsByClassName("el");
-	for(let i=0; i<el.length; i++) {
-		el[i].addEventListener("touchmove", function() {
-			el[i].classList.toggle("activate_touch");
-		})
-	}
-	function opensidemenu() {
-		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
-		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
-		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
-	}
-	function closesidemenu() {
-		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
-		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
-		document.body.style.backgroundColor = "gray";
-	}
+	<script type="text/javascript">
+		window.onload = function() {
+			var player = document.getElementsByClassName("body")[0];
+			player.className += " animate_content";
+			document.body.style.backgroundColor = "gray";
+			document.body.style.opacity = 1;
+		}
+		var el = document.getElementsByClassName("el");
+		for(let i=0; i<el.length; i++) {
+			el[i].addEventListener("touchmove", function() {
+				el[i].classList.toggle("activate_touch");
+			})
+		}
+		function opensidemenu() {
+			document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+			document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+			document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+		}
+		function closesidemenu() {
+			document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+			document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+			document.body.style.backgroundColor = "gray";
+		}
 
 	// Complex Chainable Animation Portfolio Layout
 	var $cont = document.querySelector('.cont');
@@ -229,23 +261,23 @@
 	var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
 
 	setTimeout(function() {
-	  $cont.classList.remove('s--inactive');
+		$cont.classList.remove('s--inactive');
 	}, 200);
 
 	$elsArr.forEach(function($el) {
-	  $el.addEventListener('click', function() {
-	    if (this.classList.contains('s--active')) return;
-	    $cont.classList.add('s--el-active');
-	    this.classList.add('s--active');
-	  });
+		$el.addEventListener('click', function() {
+			if (this.classList.contains('s--active')) return;
+			$cont.classList.add('s--el-active');
+			this.classList.add('s--active');
+		});
 	});
 
 	$closeBtnsArr.forEach(function($btn) {
-	  $btn.addEventListener('click', function(e) {
-	    e.stopPropagation();
-	    $cont.classList.remove('s--el-active');
-	    document.querySelector('.el.s--active').classList.remove('s--active');
-	  });
+		$btn.addEventListener('click', function(e) {
+			e.stopPropagation();
+			$cont.classList.remove('s--el-active');
+			document.querySelector('.el.s--active').classList.remove('s--active');
+		});
 	})
 
 	// Play portfolio slides
@@ -254,38 +286,41 @@
 
 	// Next/previous controls
 	function plusSlides(n) {
-	  showSlides(slideIndex += n);
+		showSlides(slideIndex += n);
 	}
 
 	function showSlides(n) {
-	  let i;
-	  let activeSlide = document.getElementsByClassName("el s--active");
-	  let _el__overflow = activeSlide[0].firstElementChild;
-	  let _el__inner = _el__overflow.children;
-	  let _el__bg = _el__inner[0].firstElementChild;
-	  if (n > 3) {slideIndex = 1}
-	  if (n < 1) {slideIndex = 3}
-	  for (i = 1; i < 4; i++) {
-	    _el__bg.classList.remove("slide"+i);
-	  }
-	  _el__bg.classList.add("slide"+slideIndex);
-	}
+		let i;
+		let activeSlide = document.getElementsByClassName("el s--active");
+		let _el__overflow = activeSlide[0].firstElementChild;
+		let _el__inner = _el__overflow.children;
+		let _el__bg = _el__inner[0].firstElementChild;
+		if (n > 3) {slideIndex = 1}
+			if (n < 1) {slideIndex = 3}
+				for (i = 1; i < 4; i++) {
+					_el__bg.classList.remove("slide"+i);
+				}
+				_el__bg.classList.add("slide"+slideIndex);
+			}
 
 	//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 	var dropdown = document.getElementsByClassName("dropdown-btn");
 	var i;
 
 	for (i = 0; i < dropdown.length; i++) {
-	  dropdown[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var dropdownContent = this.nextElementSibling;
-	    if (dropdownContent.style.display === "block") {
-	      dropdownContent.style.display = "none";
-	    } else {
-	      dropdownContent.style.display = "block";
-	    }
-	  });
+		dropdown[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropdownContent = this.nextElementSibling;
+			if (dropdownContent.style.display === "block") {
+				dropdownContent.style.display = "none";
+			} else {
+				dropdownContent.style.display = "block";
+			}
+		});
 	}
+
+	/* Filter projects by categories */
+	var mixer = mixitup('.filter-container');
 </script>
 </body>
 </html>

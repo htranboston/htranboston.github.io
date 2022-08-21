@@ -23,87 +23,87 @@
 	</style>
 </head>
 <body>
-<div id="container">
-	<div class="content" id="content">
-		<h4 class="wordCarousel">    
-	        <span style="color: black; background-color: white; opacity: 75%; margin-left: 5vw; padding-right: 5vw;">Hi, My name is Huy Tran. I'm </span>  
-	        <div> 
-	        <!-- Use classes 2,3, or 4 to match the number of words --> 
-	            <ul class="flip5"> 
-	                <li>(Creative)</li>
-	                <li>(Reliable)</li>
-	                <li>(Curious)</li> 
-	                <li>(Eccentric)</li>  
-	            </ul>
-	        </div>  
-	    </h4>
-	</div>
 	<div class="sidenav">
-	<div><a class="links active" href="index.html">HOME</a></div>
-	<div><a class="links" href="about.html">ABOUT</a></div>
-	<div class="links">
-		<button class="dropdown-btn">PORTFOLIO
-	    	<i class="fa fa-caret-down"></i>
-	  	</button>
-	  	<div class="dropdown-container">
-	    	<a href="dataviz.html">Data Visualization</a>
-	    	<a href="3dviz.html">3D Visualization</a>
-	    	<a href="exhibitdesign.html">Exhibit Design</a>
-	    	<a href="webdesign.html">Web Design</a>
-	  	</div>
-	</div>
-<!-- 	<div><a class="links" href="journal.html">BLOG</a></div> -->
-	<div><a class="links" href="contact.html">CONTACT</a></div>
-</div>
-<div class="container-fluid header">
-	<div class="row topmenu">
-		<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
-		<div class="col-sm-1 pt-0" ><a class="links active" href="index.html">HOME</a></div>
-		<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
-		<div class="col-sm-2 pt-0 dropdown">
-		    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">PORTFOLIO
-		    <span class="caret"></span>
+		<div><a class="links active" href="index.html">HOME</a></div>
+		<div><a class="links" href="about.html">ABOUT</a></div>
+		<div class="links">
+			<button class="dropdown-btn">PORTFOLIO
+				<i class="fa fa-caret-down"></i>
 			</button>
-		    <ul class="dropdown-menu">
-		      <li><a class="links" href="dataviz.html">Data Visualization</a></li>
-		      <li><a class="links" href="3dviz.html">3D Visualization</a></li>
-		      <li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
-  		      <li><a class="links" href="webdesign.html">Web Design</a></li>
-		    </ul>
+			<div class="dropdown-container">
+				<a href="dataviz.html">Data Visualization</a>
+				<a href="3dviz.html">3D Visualization</a>
+				<a href="exhibitdesign.html">Exhibit Design</a>
+				<a href="webdesign.html">Web Design</a>
+			</div>
 		</div>
-<!-- 		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div> -->
-		<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
+		<!-- 	<div><a class="links" href="journal.html">BLOG</a></div> -->
+		<div><a class="links" href="contact.html">CONTACT</a></div>
 	</div>
-	<div class="row sidemenu">
+	<div class="container-fluid header">
+		<div class="row topmenu">
+			<div class="col-sm-1 pt-0"><img class="logo" src="./images/logo-white.png"></div>
+			<div class="col-sm-1 pt-0" ><a class="links active" href="index.html">HOME</a></div>
+			<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
+			<div class="col-sm-2 pt-0 dropdown">
+				<button class="btn dropdown-toggle" type="button" data-toggle="dropdown">PORTFOLIO
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="links" href="dataviz.html">Data Visualization</a></li>
+					<li><a class="links" href="3dviz.html">3D Visualization</a></li>
+					<li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
+					<li><a class="links" href="webdesign.html">Web Design</a></li>
+				</ul>
+			</div>
+			<!-- 		<div class="col-sm-1 pt-0"><a class="links" href="journal.html">BLOG</a></div> -->
+			<div class="col-sm-1 pt-0"><a class="links" href="contact.html">CONTACT</a></div>
+		</div>
+		<div class="row sidemenu">
 			<button onclick="opensidemenu()" class="openbt"><i class="fa fa-bars"></i></button>
 			<img class="logo" src="./images/logo-white.png">
 			<button onclick="closesidemenu()" class="closebt">
-					<i class="fa fa-window-close" aria-hidden="true"></i>
+				<i class="fa fa-window-close" aria-hidden="true"></i>
 			</button>
+		</div>
 	</div>
-</div>
-</div>
-<script type="text/javascript">
-	function opensidemenu() {
-		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
-		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
-		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
-	} 
+	<div id="container">
+		<div class="content" id="content">
+			<h4 class="wordCarousel">    
+				<span style="color: black; background-color: white; opacity: 75%; margin-left: 5vw; padding-right: 5vw;">Hi, My name is Huy Tran. I'm </span>  
+				<div> 
+					<!-- Use classes 2,3, or 4 to match the number of words --> 
+					<ul class="flip5"> 
+						<li>(Creative)</li>
+						<li>(Reliable)</li>
+						<li>(Curious)</li> 
+						<li>(Eccentric)</li>  
+					</ul>
+				</div>  
+			</h4>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function opensidemenu() {
+			document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+			document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+			document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+		} 
 
-	function closesidemenu() {
-		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
-		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
-		document.body.style.backgroundColor = "#AEBFBC";
-	}
+		function closesidemenu() {
+			document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+			document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+			document.body.style.backgroundColor = "#AEBFBC";
+		}
 
 	// Touch function for mobile
 	$('#touchOpen').on('click touchend', function(event) {
-   		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
 		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
 		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
 	});  
 	$('#touchClose').on('click touchend', function(event) {
-   		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
 		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
 		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
 	});
@@ -125,9 +125,9 @@
 
 	panorama = new PANOLENS.ImagePanorama( 'images/goldenpalace.jpg' );
 	panorama.addEventListener("click", function(e){
-	  if (e.intersects.length > 0) return;
-	  const a = viewer.raycaster.intersectObject(viewer.panorama, true)[0].point;
-	  console.log('click panorama\n', e, 'point\n', a);
+		if (e.intersects.length > 0) return;
+		const a = viewer.raycaster.intersectObject(viewer.panorama, true)[0].point;
+		console.log('click panorama\n', e, 'point\n', a);
 	});
 
 	//Link to soccerbetbuddy
@@ -151,7 +151,7 @@
 	infospot2.addHoverText( "Projects" );
 	infospot2.addEventListener( 'click', function(){
 	  // viewer.setPanorama( panorama2 );
-	  window.open("https://htranboston.github.io/portfolio.html")
+	  window.open("portfolio.html")
 	} );
 
 	panorama.add( infospot1, infospot2 );
@@ -160,7 +160,7 @@
 	viewer.add( panorama, panorama2 );
 
 	viewer.addUpdateCallback(function(){
-	  
+
 	});
 </script>
 </body>

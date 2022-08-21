@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/responsivegridgallery.css">
 	<link rel="stylesheet" type="text/css" href="https://www.helha.pub/scripts/lightbox2-2.11.1/dist/css/lightbox.min.css">
+
 </head>
 <body>
 	<div class="sidenav">
@@ -29,7 +30,7 @@
 			</button>
 			<div class="dropdown-container">
 				<a href="dataviz.html">Data Visualization</a>
-				<a href="3dviz.html">3D Visualization</a>
+				<a href="3dviz.html" class="active">3D Visualization</a>
 				<a href="exhibitdesign.html">Exhibit Design</a>
 				<a href="webdesign.html">Web Design</a>
 			</div>
@@ -48,7 +49,7 @@
 				</button>
 				<ul class="dropdown-menu">
 					<li><a class="links" href="dataviz.html">Data Visualization</a></li>
-					<li><a class="links" href="3dviz.html">3D Visualization</a></li>
+					<li><a class="links active" href="3dviz.html">3D Visualization</a></li>
 					<li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
 					<li><a class="links" href="webdesign.html">Web Design</a></li>
 				</ul>
@@ -164,9 +165,9 @@
 					<a href="portfolio/3dviz/16.jpg" data-lightbox="lightbox" data-title="Intercontinental Source">
 						<img src="portfolio/3dviz/16.jpg">
 					</a>
-					<button onclick="window.open('https://htranboston.github.io/demo01/', '_blank')">
-			      		View Demo
-				    </button>
+					<button class="demo" onclick="window.open('https://htranboston.github.io/demo01/', '_blank')">
+						View Demo
+					</button>
 				</div>
 				<div class="item mix nailsalon">
 					<a href="portfolio/3dviz/18.jpg" data-lightbox="lightbox" data-title="Golden Palace Salon">
@@ -177,9 +178,9 @@
 					<a href="portfolio/3dviz/17.jpg" data-lightbox="lightbox" data-title="TES Interactive">
 						<img src="portfolio/3dviz/17.jpg">
 					</a>
-					<button onclick="window.open('https://htranboston.github.io/interactive/', '_blank')">
-			      		View Demo
-				    </button>
+					<button class="demo" onclick="window.open('https://htranboston.github.io/interactive/', '_blank')">
+						View Demo
+					</button>
 				</div>
 				<!-- <div class="item mix nailsalon">
 					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
@@ -212,38 +213,38 @@
 			</ul>
 		</div>
 	</div>
-<div class="container-fluid footer">
-	<div class="row">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-8">
-			<p style="color: white; margin-top: 100px;">Copyright &copy; 2022 HT Creative Studio</p>     
+	<div class="container-fluid footer">
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<p style="color: white; margin-top: 100px;">Copyright &copy; 2022 HT Creative Studio</p>     
+			</div>
+			<div class="col-sm-2"></div>
 		</div>
-		<div class="col-sm-2"></div>
 	</div>
-</div>
-<script type="text/javascript">
-	window.onload = function() {
-		var player = document.getElementsByClassName("body")[0];
-		player.className += " animate_content";
-		document.body.style.backgroundColor = "gray";
-		document.body.style.opacity = 1;
-	}
-	var el = document.getElementsByClassName("el");
-	for(let i=0; i<el.length; i++) {
-		el[i].addEventListener("touchmove", function() {
-			el[i].classList.toggle("activate_touch");
-		})
-	}
-	function opensidemenu() {
-		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
-		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
-		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
-	}
-	function closesidemenu() {
-		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
-		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
-		document.body.style.backgroundColor = "gray";
-	}
+	<script type="text/javascript">
+		window.onload = function() {
+			var player = document.getElementsByClassName("body")[0];
+			player.className += " animate_content";
+			document.body.style.backgroundColor = "gray";
+			document.body.style.opacity = 1;
+		}
+		var el = document.getElementsByClassName("el");
+		for(let i=0; i<el.length; i++) {
+			el[i].addEventListener("touchmove", function() {
+				el[i].classList.toggle("activate_touch");
+			})
+		}
+		function opensidemenu() {
+			document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+			document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+			document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+		}
+		function closesidemenu() {
+			document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+			document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+			document.body.style.backgroundColor = "gray";
+		}
 
 	// Complex Chainable Animation Portfolio Layout
 	var $cont = document.querySelector('.cont');
@@ -309,7 +310,7 @@
 		});
 	}
 
-	/* ATTENTION, les scripts jQuery, MixItUp et lightbox sont chargés dans les options (roue crantée) JS */
+	/* Filter projects by categories */
 	var mixer = mixitup('.filter-container');
 </script>
 </body>

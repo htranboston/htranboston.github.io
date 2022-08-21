@@ -1,8 +1,0 @@
-[0708/192948.093:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
-[0708/192951.672:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
-[0708/192953.483:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
-[0710/124728.500:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
-[0710/124730.668:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
-[0710/124730.681:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
-[0710/124840.559:WARNING:ipc_message_attachment_set.cc(49)] MessageAttachmentSet destroyed with unconsumed attachments: 0/1
-[0710/124840.562:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.

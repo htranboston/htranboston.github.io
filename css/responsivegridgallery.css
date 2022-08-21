@@ -9,6 +9,7 @@
 .grid-container .item {
   background:#8FF;
   display:flex;
+  justify-content: center;
 }
 .grid-container .item a {
   display:flex;
@@ -22,7 +23,6 @@
   height:auto;
   object-fit:cover;
 }
-
 
 /* CSS ne servant qu'à la décoration, inutile pour le fonctionnement */
 

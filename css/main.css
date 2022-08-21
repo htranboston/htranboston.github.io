@@ -3,6 +3,13 @@ body {
   opacity: 0;
   transition: 1.1s ease-in;
 }
+.demo {
+  opacity: 75%;
+  position: absolute;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font: italic 800 1vw Muli, san-serif
+}
 #bgimg {
   position: relative;
   bottom: -200px;
@@ -174,7 +181,6 @@ a.active {
     font: italic 800 1vw Muli, san-serif;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
     display: block;
     border: none;
     background: none;
@@ -221,4 +227,10 @@ a.active {
   }
   #exhibitHeader {
     font-size: 5vw;
+  }
+  a.active {
+    color: gold;
+  }
+  a {
+    color: #818181; 
   }
