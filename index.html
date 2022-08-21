@@ -97,25 +97,25 @@
 		}
 
 	// Touch function for mobile
-	$('#touchOpen').on('click touchend', function(event) {
-		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
-		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
-		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
-	});  
-	$('#touchClose').on('click touchend', function(event) {
-		document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
-		document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
-		document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
-	});
+	// $('#touchOpen').on('click touchend', function(event) {
+	// 	document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+	// 	document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+	// 	document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+	// });  
+	// $('#touchClose').on('click touchend', function(event) {
+	// 	document.getElementsByClassName("sidenav")[0].classList.toggle("overlaymenu");
+	// 	document.getElementsByClassName("closebt")[0].classList.toggle("activateclosebt");
+	// 	document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+	// });
 
-	var mobileLinks = document.getElementsByClassName("links");
-	for(let i=0; i<mobileLinks.length; i++) {
-		mobileLinks[i].addEventListener('touchend', process_touchend, false);
-	}
+	// var mobileLinks = document.getElementsByClassName("links");
+	// for(let i=0; i<mobileLinks.length; i++) {
+	// 	mobileLinks[i].addEventListener('touchend', process_touchend, false);
+	// }
 
-	function process_touchend(ev) {
-		window.open(ev.currentTarget, "_self");
-	} 
+	// function process_touchend(ev) {
+	// 	window.open(ev.currentTarget, "_self");
+	// } 
 
 	// Panorama function
 
