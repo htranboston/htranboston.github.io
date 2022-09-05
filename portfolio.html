@@ -24,11 +24,11 @@
 		<div><a class="links" href="index.html">HOME</a></div>
 		<div><a class="links" href="about.html">ABOUT</a></div>
 		<div class="links">
-			<button class="dropdown-btn">PORTFOLIO
+			<button class="dropdown-btn active">PORTFOLIO
 				<i class="fa fa-caret-down"></i>
 			</button>
 			<div class="dropdown-container">
-				<a href="dataviz.html" class="active">Data Visualization</a>
+				<a href="dataviz.html">Data Visualization</a>
 				<a href="3dviz.html">3D Visualization</a>
 				<a href="exhibitdesign.html">Exhibit Design</a>
 				<a href="webdesign.html">Web Design</a>
@@ -43,11 +43,11 @@
 			<div class="col-sm-1 pt-0" ><a class="links" href="index.html">HOME</a></div>
 			<div class="col-sm-1 pt-0"><a class="links" href="about.html">ABOUT</a></div>
 			<div class="col-sm-2 pt-0 dropdown">
-				<button class="btn dropdown-toggle" type="button" data-toggle="dropdown">PORTFOLIO
+				<button class="btn dropdown-toggle active" type="button" data-toggle="dropdown">PORTFOLIO
 					<span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu">
-					<li><a class="links active" href="dataviz.html">Data Visualization</a></li>
+					<li><a class="links" href="dataviz.html">Data Visualization</a></li>
 					<li><a class="links" href="3dviz.html">3D Visualization</a></li>
 					<li><a class="links" href="exhibitdesign.html">Exhibit Design</a></li>
 					<li><a class="links" href="webdesign.html">Web Design</a></li>
@@ -66,27 +66,9 @@
 	</div>
 	<div class="container-fluid body">
 		<div class="row">
-			<div class="col-sm-12">
-				<h2 id="exhibitHeader">
-					<span class="fa-stack">
-						<i class="fa fa-circle fa-stack-2x"></i>
-						<strong class="fa-stack-1x" style="color: white; padding-left: 1px; ">1</strong>
-					</span>
-					DATA VISUALIZATION
-				</h2>
-				<br>
-			</div>
 			<!-- ATTENTION, all thumbnails must measure 480px by 300px, horizontally or vertically! The size of large images does not matter, but exceeding 1800px is useless and will weigh down your site -->
-			<div class="filter-buttons col-sm-12">
-				<button type="button" data-filter="all">All</button>
-				<button type="button" data-filter=".tableau">Tableau</button>
-				<button type="button" data-filter=".powerbi">Power BI</button>
-				<button type="button" data-filter=".sql">SQL</button>
-				<button type="button" data-filter=".r">R</button>
-				<button type="button" data-filter=".d3">D3.js</button>
-			</div>
-			<div class="grid-container filter-container col-sm-12">
-				<div class="item mix tableau">
+			<div class="grid-container col-sm-12">
+				<div class="item mix dataviz">
 					<a href="portfolio/dataviz/01.png" data-lightbox="lightbox" data-title="C02 Emissions">
 						<img src="portfolio/dataviz/01.png">
 					</a>
@@ -94,7 +76,7 @@
 						View Sample
 					</button>
 				</div>
-				<div class="item mix tableau">
+				<div class="item mix dataviz">
 					<a href="portfolio/dataviz/02.png" data-lightbox="lightbox" data-title="Gas Price by Country 2022">
 						<img src="portfolio/dataviz/02.png">
 					</a>
@@ -102,75 +84,75 @@
 						View Sample
 					</button>
 				</div>
-				<div class="item portrait mix tableau">
-					<a href="portfolio/dataviz/03.jpg" data-lightbox="lightbox" data-title="Value Investing Portfolio 2022">
-						<img src="portfolio/dataviz/03.jpg">
+				<div class="item portrait mix dataviz">
+					<a href="portfolio/dataviz/valueinvesting.jpg" data-lightbox="lightbox" data-title="Value Investing Portfolio 2022">
+						<img src="portfolio/dataviz/valueinvesting.jpg">
 					</a>
 					<button class="demo" onclick="window.open('https://public.tableau.com/views/ValueInvestingPortfolio2022/StocksBoard?:language=en-US&:display_count=n&:origin=viz_share_link', '_blank')">
 						View Sample
 					</button>
 				</div>
-				<div class="item mix nailsalon">
+				<div class="item mix">
 					<a href="portfolio/3dviz/4.jpg" data-lightbox="lightbox" data-title="Time Nails">
 						<img src="portfolio/3dviz/4.jpg">
 					</a>
 				</div>
-				<div class="item mix nailsalon">
+				<div class="item mix">
 					<a href="portfolio/3dviz/5.jpg" data-lightbox="lightbox" data-title="Beautyland by Hannah">
 						<img src="portfolio/3dviz/5.jpg">
 					</a>
 				</div>
-				<div class="item portrait mix restaurant">
+				<div class="item portrait mix">
 					<a href="portfolio/3dviz/6.jpg" data-lightbox="lightbox" data-title="Kungfu Tea">
 						<img src="portfolio/3dviz/6.jpg">
 					</a>
 				</div>
-				<div class="item mix nailsalon">
+				<div class="item mix">
 					<a href="portfolio/3dviz/7.jpg" data-lightbox="lightbox" data-title="Golden Nail">
 						<img src="portfolio/3dviz/7.jpg">
 					</a>
 				</div>
-				<div class="item portrait mix restaurant">
+				<div class="item portrait mix">
 					<a href="portfolio/3dviz/8.jpg" data-lightbox="lightbox" data-title="Gongcha Tea">
 						<img src="portfolio/3dviz/8.jpg">
 					</a>
 				</div>
-				<div class="item mix nailsalon">
+				<div class="item mix">
 					<a href="portfolio/3dviz/9.jpg" data-lightbox="lightbox" data-title="North West Beauty">
 						<img src="portfolio/3dviz/9.jpg">
 					</a>
 				</div>
-				<div class="item mix nailsalon">
+				<div class="item mix">
 					<a href="portfolio/3dviz/10.jpg" data-lightbox="lightbox" data-title="Winter Wonderland Spa">
 						<img src="portfolio/3dviz/10.jpg">
 					</a>
 				</div>
-				<div class="item mix restaurant">
+				<div class="item mix">
 					<a href="portfolio/3dviz/11.jpg" data-lightbox="lightbox" data-title="Saigon Bistro">
 						<img src="portfolio/3dviz/11.jpg">
 					</a>
 				</div>
-				<div class="item mix nailsalon">
+				<div class="item mix">
 					<a href="portfolio/3dviz/12.jpg" data-lightbox="lightbox" data-title="Moose Nails Spa">
 						<img src="portfolio/3dviz/12.jpg">
 					</a>
 				</div>
-				<div class="item mix nailsalon">
+				<div class="item mix">
 					<a href="portfolio/3dviz/13.jpg" data-lightbox="lightbox" data-title="Boston Best Salon">
 						<img src="portfolio/3dviz/13.jpg">
 					</a>
 				</div>
-				<div class="item mix nailsalon">
+				<div class="item mix">
 					<a href="portfolio/3dviz/14.jpg" data-lightbox="lightbox" data-title="Fomosa Beauty Salon">
 						<img src="portfolio/3dviz/14.jpg">
 					</a>
 				</div>
-				<div class="item portrait mix nailsalon">
+				<div class="item portrait mix">
 					<a href="portfolio/3dviz/15.jpg" data-lightbox="lightbox" data-title="Pinky Nails">
 						<img src="portfolio/3dviz/15.jpg">
 					</a>
 				</div>
-				<div class="item portrait mix vr">
+				<div class="item portrait mix">
 					<a href="portfolio/3dviz/16.jpg" data-lightbox="lightbox" data-title="Intercontinental Source">
 						<img src="portfolio/3dviz/16.jpg">
 					</a>
@@ -178,12 +160,12 @@
 						View Demo
 					</button>
 				</div>
-				<div class="item mix nailsalon">
+				<div class="item mix">
 					<a href="portfolio/3dviz/18.jpg" data-lightbox="lightbox" data-title="Golden Palace Salon">
 						<img src="portfolio/3dviz/18.jpg">
 					</a>
 				</div>
-				<div class="item portrait mix vr">
+				<div class="item portrait mix">
 					<a href="portfolio/3dviz/17.jpg" data-lightbox="lightbox" data-title="TES Interactive">
 						<img src="portfolio/3dviz/17.jpg">
 					</a>
@@ -191,31 +173,42 @@
 						View Demo
 					</button>
 				</div>
-				<!-- <div class="item mix nailsalon">
+				<!-- <div class="item mix">
 					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
 						<img src="https://via.placeholder.com/480x330/999977/ffffff?text=nailsalon">
 					</a>
 				</div>
-				<div class="item mix restaurant">
+				<div class="item mix">
 					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
 						<img src="https://via.placeholder.com/330x480/779999/ffffff?text=restaurant">
 					</a>
 				</div>
-				<div class="item mix vr">
+				<div class="item mix">
 					<a href="https://via.placeholder.com/800x600?text=magrandeimage.jpg" data-lightbox="lightbox" data-title="Légende de l'image">
 						<img src="https://via.placeholder.com/480x330/779977/ffffff?text=vr">
 					</a>
 				</div> -->
-				<div class="item mix nailsalon">
-					<a href="portfolio/3dviz/18.jpg" data-lightbox="lightbox" data-title="Golden Palace Salon">
-						<img src="portfolio/3dviz/18.jpg">
+				<div class="item mix">
+					<a href="portfolio/webdesign/yurooms.png" data-lightbox="lightbox" data-title="Yurooms">
+						<img src="portfolio/webdesign/yurooms.png">
 					</a>
+					<button class="demo" onclick="window.open('https://yurooms.com', '_blank')">
+						View Website
+					</button>
+				</div>
+				<div class="item mix">
+					<a href="portfolio/webdesign/htswipe.png" data-lightbox="lightbox" data-title="HT Swipe">
+						<img src="portfolio/webdesign/htswipe.png">
+					</a>
+					<button class="demo" onclick="window.open('https://htswipe.com', '_blank')">
+						View Website
+					</button>
 				</div>
 			</div>
 		</div>
 		<div class="page-nav">
 			<ul class="pagination">
-				<li class="page-item"><a class="page-link active" href="dataviz.html">Data Visualization</a></li>
+				<li class="page-item"><a class="page-link" href="dataviz.html">Data Visualization</a></li>
 				<li class="page-item"><a class="page-link" href="3dviz.html">3D Visualization</a></li>
 				<li class="page-item"><a class="page-link" href="exhibitdesign.html">Exhibit Design</a></li>
 				<li class="page-item"><a class="page-link" href="webdesign.html">Web Design</a></li>
@@ -320,7 +313,7 @@
 	}
 
 	/* Filter projects by categories */
-	var mixer = mixitup('.filter-container');
+	var mixer = mixitup('.');
 </script>
 </body>
 </html>

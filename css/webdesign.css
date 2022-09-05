@@ -347,7 +347,7 @@ body {
 .el:nth-child(1) .el__bg.slide1:before {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
-  background-image: url("../portfolio/webdesign/yurooms.jpg");
+  background-image: url("./portfolio/webdesign/yurooms.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -378,7 +378,7 @@ body {
 .el:nth-child(2) .el__bg.slide1:before {
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
-  background-image: url("../portfolio/webdesign/htswipe.jpg");
+  background-image: url("./portfolio/webdesign/htswipe.jpg");
 }
 .el:nth-child(3) {
   -webkit-transform: translate3d(210.4166666667%, 0, 0);
@@ -406,7 +406,7 @@ body {
 .el:nth-child(3) .el__bg.slide1:before {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
-  background-image: url("../portfolio/webdesign/soccerbetbuddy.jpg");
+  background-image: url("./portfolio/webdesign/soccerbetbuddy.jpg");
 }
 .el:nth-child(4) {
   -webkit-transform: translate3d(315.625%, 0, 0);
@@ -434,7 +434,7 @@ body {
 .el:nth-child(4) .el__bg.slide1:before {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
-  background-image: url("../portfolio/webdesign/todolist.jpg");
+  background-image: url("./portfolio/webdesign/todolist.jpg");
 }
 .el:hover .el__bg:after {
   opacity: 0;
